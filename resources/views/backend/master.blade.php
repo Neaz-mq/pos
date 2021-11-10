@@ -37,21 +37,13 @@
         <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
-            <a href="../admin/dashboard.php" class="site_title"><i class="fa fa-paw"></i> <span>Sports shop </span></a>
+            <a href="../admin/dashboard.php" class="site_title"><i class="fa fa-bank"></i> <span>Sports shop </span></a>
         </div>
 
         <div class="clearfix"></div>
 
         <!-- menu profile quick info -->
-        <div class="profile clearfix">
-            <div class="profile_pic">
-                <img src="{{url('/images/img.png')}}" alt="..." class="img-circle profile_img">
-            </div>
-            <div class="profile_info">
-                <span>Welcome,</span>
-                <h2>Sports shop </h2>
-            </div>
-        </div>
+        
         <!-- /menu profile quick info -->
 
         <br />
@@ -61,20 +53,7 @@
         <!-- /sidebar menu -->
 
         <!-- /menu footer buttons -->
-        <div class="sidebar-footer hidden-small">
-            <a data-toggle="tooltip" data-placement="top" title="Settings">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="Logout" href="../../src/store/Logout.php">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-            </a>
-        </div>
+        
         <!-- /menu footer buttons -->
     </div>
 </div>
@@ -88,34 +67,34 @@
             <!-- top tiles -->
             <div class="row tile_count">
                 <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-                    <span class="count_top"><i class="fa fa-user"></i> Total Live Event in live</span>
-                    <div class="count">3</div>
-                    <span class="count_bottom"><i class="green">4% </i> From last Week</span>
+                    <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
+                    <div class="count"></div>
+                    <span class="count_bottom"><i class="green"> </i> </span>
                 </div>
                 <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-                    <span class="count_top"><i class="fa fa-clock-o"></i> Total Notice in board</span>
-                    <div class="count">2</div>
-                    <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
+                    <span class="count_top"><i class="fa fa-user"></i>Total Products</span>
+                    <div class="count"></div>
+                    <span class="count_bottom"><i class="green"> </i></span>
                 </div>
                 <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-                    <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
-                    <div class="count green">2,500</div>
-                    <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+                    <span class="count_top"><i class="fa fa-user"></i> Total Customers</span>
+                    <div class="count green"></div>
+                    <span class="count_bottom"><i class="green"></i> </span>
                 </div>
                 <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-                    <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
-                    <div class="count">4,567</div>
-                    <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
+                    <span class="count_top"><i class="fa fa-user"></i> Total Suppliers</span>
+                    <div class="count"></div>
+                    <span class="count_bottom"><i class="red"> </i> </span>
                 </div>
                 <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-                    <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
-                    <div class="count">2,315</div>
-                    <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+                    <span class="count_top"><i class="fa fa-user"></i> Total Purchase value  </span>
+                    <div class="count"></div>
+                    <span class="count_bottom"><i class="green"> </i> </span>
                 </div>
                 <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-                    <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
-                    <div class="count">7,325</div>
-                    <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+                    <span class="count_top"><i class="fa fa-user"></i> Total Sale value </span>
+                    <div class="count"></div>
+                    <span class="count_bottom"><i class="green"></i></span>
                 </div>
             </div>
             <!-- /top tiles -->

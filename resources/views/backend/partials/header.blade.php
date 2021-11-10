@@ -7,10 +7,7 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li class="">
-                    <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        <img src="{{url('/images/img.png')}}" alt="">Sports shop
-                        <span class=" fa fa-angle-down"></span>
-                    </a>
+                    
                     <ul class="dropdown-menu dropdown-usermenu pull-right">
                         <li><a href="javascript:;"> Profile</a></li>
                         <li><a href="../../src/store/Logout.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
@@ -18,17 +15,14 @@
                 </li>
 
                 <li role="presentation" class="dropdown">
-                    <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                        <i class="fa fa-calendar"></i>
-                        <span class="badge bg-green">3</span>
-                    </a>
+                    
                     <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
 
                                                 <li>
                             <a>
                                 <span class="image"><img src="../../resource/images/img.png" alt="Profile Image" /></span>
                                 <span>
-                                  <span>Sandwitch Group</span>
+                                  <span>Sports shop</span>
                                   <span class="time">00:17:00</span>
                                 </span>
                                 <span class="message">
@@ -39,7 +33,7 @@
                             <a>
                                 <span class="image"><img src="{{url('/images/img.png')}}" alt="Profile Image" /></span>
                                 <span>
-                                  <span>Sandwitch Group</span>
+                                  <span>Sports shopddd</span>
                                   <span class="time">12:59:00</span>
                                 </span>
                                 <span class="message">
