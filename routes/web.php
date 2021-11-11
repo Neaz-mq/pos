@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+    // return view('backend.master');
+// });
 Route::get('/', function () {
-    return view('backend.master');
+    return view('backend.layouts.store');
+});
+Route::get('/contact', function () {
+    return view('backend.layouts.contact');
 });

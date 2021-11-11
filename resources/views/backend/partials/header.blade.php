@@ -33,7 +33,7 @@
                             <a>
                                 <span class="image"><img src="{{url('/images/img.png')}}" alt="Profile Image" /></span>
                                 <span>
-                                  <span>Sports shopddd</span>
+                                  <span>Sports shop</span>
                                   <span class="time">12:59:00</span>
                                 </span>
                                 <span class="message">
