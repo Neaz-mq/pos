@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\backend\StoreController;
+use App\Http\Controllers\backend\PosController;
+use App\Http\Controllers\backend\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,12 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-    // return view('backend.master');
-// });
-Route::get('/', function () {
-    return view('backend.layouts.store');
-});
-Route::get('/contact', function () {
-    return view('backend.layouts.contact');
-});
+
+Route::get('/',[StoreController::class,'store']);
+Route::get('/POS',[PosController::class,'Point_of_Sale'])->name('POS.Point_of_Sale');
+Route::get('/Dashboard',[DashboardController::class,'Dashboard']);
+    
+

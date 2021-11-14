@@ -3,7 +3,7 @@
                 
                 <ul class="nav side-menu">
                     <li>
-                        <a><i class="fa fa-dashboard"></i>Dashboard </a>
+                        <a href="{{url('/Dashboard')}}"><i class="fa fa-dashboard"></i>Dashboard </a>
                         <ul class="nav child_menu">
                             <!-- <li><a href="../admin/dashboard.php">Dashboard</a></li> -->
                             <!--<li><a href="../admin/dashboard2.php">Dashboard2</a></li>-->
@@ -11,8 +11,11 @@
                         </ul>
                     </li>
                     <li>
-                        <a><i class="fa fa-cart-plus"></i> POS </a>
+                    <!-- <li><a href="{{url('/POS')}}"></a></li> -->
+                        <a href="{{url('/POS')}}"><i class="fa fa-cart-plus"></i> POS </a>
+                        
                         <ul class="nav child_menu">
+                        
                             
                         </ul>
                     </li>
@@ -47,6 +50,15 @@
                         <ul class="nav child_menu">
                             <li><a href="../Add customer/Add customer.php">Add Suppliers</a></li>
                             <li><a href="../Manage customer/Manage customer.php">Manage Suppliers</a></li>
+
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-book"></i> Products <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="../Add customer/Add customer.php">Add products</a></li>
+                            <li><a href="../Manage customer/Manage customer.php">Manage products</a></li>
 
                             
                         </ul>
