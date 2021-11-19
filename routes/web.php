@@ -1,9 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\backend\DashboardController;
 use App\Http\Controllers\backend\StoreController;
 use App\Http\Controllers\backend\PosController;
-use App\Http\Controllers\backend\DashboardController;
+use App\Http\Controllers\backend\SaleController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\CategoryController;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +26,20 @@ use App\Http\Controllers\backend\DashboardController;
 Route::get('/',[StoreController::class,'store']);
 Route::get('/POS',[PosController::class,'Point_of_Sale'])->name('POS.Point_of_Sale');
 Route::get('/Dashboard',[DashboardController::class,'Dashboard']);
-    
+Route::get('/Sales',[SaleController::class,'Sales']);
 
+
+
+
+
+
+Route::get('/Products',[ProductController::class,'list'])->name('Products.list');
+
+
+// category
+Route::get('/category/list',[CategoryController::class,'list'])->name('category.list');
+Route::post('/category/add',[CategoryController::class,'add'])->name('caterogy.add');
+
+//start user
+Route::get('/adduser',[UserController::class,'adduser'])->name('add.user');
+//end user
