@@ -6,7 +6,8 @@ use App\Http\Controllers\backend\StoreController;
 use App\Http\Controllers\backend\PosController;
 use App\Http\Controllers\backend\SaleController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\backend\ProductController;
+use App\Http\Controllers\backend\CategoryController;
 
 
 
@@ -31,14 +32,16 @@ Route::get('/Sales',[SaleController::class,'Sales']);
 
 
 
+// product
 
-
-Route::get('/Products',[ProductController::class,'list'])->name('Products.list');
+Route::get('/add/product',[ProductController::class,'addproduct'])->name('add.product');
+Route::get('/product/manage',[ProductController::class,'product_manage'])->name('product.manage');
+Route::post('/product/post',[ProductController::class,'add'])->name('product.post');
 
 
 // category
 Route::get('/category/list',[CategoryController::class,'list'])->name('category.list');
-Route::post('/category/add',[CategoryController::class,'add'])->name('caterogy.add');
+Route::post('/category/add',[CategoryController::class,'add'])->name('caterogy.add'); 
 
 //start user
 Route::get('/adduser',[UserController::class,'adduser'])->name('add.user');

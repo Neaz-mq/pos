@@ -48,7 +48,7 @@
             <li>
                 <a><i class="fa fa-users"></i> Suppliers <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="../Add customer/Add customer.php">Add Suppliers</a></li>
+                    <li><a href="../Add customer/Add customer.php">Add Supplier</a></li>
                     <li><a href="../Manage customer/Manage customer.php">Manage Suppliers</a></li>
 
 
@@ -57,8 +57,8 @@
             <li>
                 <a><i class="fa fa-book"></i> Products <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="../Add customer/Add customer.php">Add products</a></li>
-                    <li><a href="../Add customer/Add customer.php">Manage products</a></li>
+                    <li><a href="{{route('add.product')}}">Add product</a></li>
+                    <li><a href="{{route('product.manage')}}">Manage products</a></li>
 
 
                 </ul>

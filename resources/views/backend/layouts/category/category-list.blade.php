@@ -13,8 +13,9 @@
 
 
         </div>
-        <div class="clearfix"></div>
 
+        <div class="clearfix"></div>
+        <br>
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
@@ -24,21 +25,29 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
+                                    <th scope="col">Category name</th>
+                                    <th scope="col">Details</th>
+                                    <th scope="col">Action</th>
+
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($category as $categories)
+
 
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
+
+                                    <td>{{ $categories->name}}</td>
+                                    <td>{{ $categories->details}}</td>
+                                    <td>
+                                        <a href=""><i class="fa fa-edit"></a></i>
+                                        <a href=""><i class="fa fa-close"></i></a>
+                                    </td>
+
                                 </tr>
-                                
+
+                                @endforeach
+
                             </tbody>
                         </table>
                     </div>
@@ -72,14 +81,15 @@
 
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Category Details</label>
-                        <textarea name="details" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea name="details" class="form-control" id="exampleFormControlTextarea1"
+                            rows="3"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                
+
             </div>
         </div>
     </div>
