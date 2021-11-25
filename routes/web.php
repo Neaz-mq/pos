@@ -6,6 +6,7 @@ use App\Http\Controllers\backend\StoreController;
 use App\Http\Controllers\backend\PosController;
 use App\Http\Controllers\backend\SaleController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\backend\ProductController;
 use App\Http\Controllers\backend\CategoryController;
 
@@ -36,7 +37,7 @@ Route::get('/Sales',[SaleController::class,'Sales']);
 
 Route::get('/add/product',[ProductController::class,'addproduct'])->name('add.product');
 Route::get('/product/manage',[ProductController::class,'product_manage'])->name('product.manage');
-Route::post('/product/post',[ProductController::class,'add'])->name('product.post');
+Route::post('/product/post',[ProductController::class,'store'])->name('product.post');
 
 
 // category
@@ -46,3 +47,9 @@ Route::post('/category/add',[CategoryController::class,'add'])->name('caterogy.a
 //start user
 Route::get('/adduser',[UserController::class,'adduser'])->name('add.user');
 //end user
+
+// Customer
+Route::get('/add/customer', [CustomerController::class,'addcustomer'])->name('add.customer');;
+Route::get('/customer/manage',[CustomerController::class,'customer_manage'])->name('customer.manage');
+Route::post('/customer/post',[CustomerController::class,'store'])->name('customer.post');
+    

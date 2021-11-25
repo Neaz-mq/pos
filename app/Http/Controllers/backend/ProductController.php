@@ -13,7 +13,7 @@ class ProductController extends Controller
         // dd($product);
         return view('backend.layouts.product.addproduct',compact('categories'));
     }
-    public function add(Request $request){
+    public function store(Request $request){
         // dd($request->all());
         Product::create([
             // name for db field || name for form fields

@@ -83,11 +83,11 @@
 
 
                             <div class="item form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="department">Available
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="availability">Available
                                     <span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <select id="department" name="availability">
+                                    <select id="availability" name="availability">
                                         <option value="yes">Available</option>
                                         <option value="no">Unavailable</option>
                                     </select>

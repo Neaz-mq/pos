@@ -39,8 +39,8 @@
             <li>
                 <a><i class="fa fa-users"></i> Customers <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="../Add customer/Add customer.php">Add customer</a></li>
-                    <li><a href="../Manage customer/Manage customer.php">Manage customers</a></li>
+                    <li><a href="{{route('add.customer')}}">Add customer</a></li>
+                    <li><a href="{{route('customer.manage')}}">Manage customers</a></li>
 
 
                 </ul>
