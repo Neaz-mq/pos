@@ -7,6 +7,7 @@ use App\Http\Controllers\backend\PosController;
 use App\Http\Controllers\backend\SaleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\backend\ProductController;
 use App\Http\Controllers\backend\CategoryController;
 
@@ -49,7 +50,11 @@ Route::get('/adduser',[UserController::class,'adduser'])->name('add.user');
 //end user
 
 // Customer
-Route::get('/add/customer', [CustomerController::class,'addcustomer'])->name('add.customer');;
+Route::get('/add/customer', [CustomerController::class,'addcustomer'])->name('add.customer');
 Route::get('/customer/manage',[CustomerController::class,'customer_manage'])->name('customer.manage');
 Route::post('/customer/post',[CustomerController::class,'store'])->name('customer.post');
     
+// Supplier
+Route::get('/add/supplier', [SupplierController::class,'addsupplier'])->name('add.supplier');
+Route::get('/supplier/manage',[SupplierController::class,'supplier_manage'])->name('supplier.manage');
+Route::post('/supplier/post',[SupplierController::class,'store'])->name('supplier.post');

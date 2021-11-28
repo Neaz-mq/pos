@@ -48,8 +48,8 @@
             <li>
                 <a><i class="fa fa-users"></i> Suppliers <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="../Add customer/Add customer.php">Add Supplier</a></li>
-                    <li><a href="../Manage customer/Manage customer.php">Manage Suppliers</a></li>
+                    <li><a href="{{route('add.supplier')}}">Add Supplier</a></li>
+                    <li><a href="{{route('supplier.manage')}}">Manage Suppliers</a></li>
 
 
                 </ul>

@@ -14,7 +14,7 @@ class ProductController extends Controller
         return view('backend.layouts.product.addproduct',compact('categories'));
     }
     public function store(Request $request){
-        // dd($request->all());
+        //dd($request->all());
         Product::create([
             // name for db field || name for form fields
             'name'=>$request->name,
