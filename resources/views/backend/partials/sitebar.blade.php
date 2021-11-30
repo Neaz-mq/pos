@@ -14,23 +14,18 @@
                 <!-- <li><a href="{{url('/POS')}}"></a></li> -->
                 <a href="{{url('/POS')}}"><i class="fa fa-cart-plus"></i> POS </a>
 
-                <ul class="nav child_menu">
-
-
-                </ul>
+                
             </li>
 
             <li>
                 <a href="{{url('/Sales')}}"><i class="fa fa-shopping-bag"></i> Sales </a>
-                <ul class="nav child_menu">
-
-                </ul>
+                
             </li>
             <li>
                 <a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="{{route('add.user')}}">Add user</a></li>
-                    <li><a href="../Manage users/Manage users.php">Manage users</a></li>
+                    <li><a href="{{route('user.manage')}}">Manage users</a></li>
 
 
                 </ul>
@@ -69,12 +64,30 @@
                
             </li>
             <li>
-                <a><i class="fa fa-folder-o"></i> Stocks</a>
+                <a href="{{route('stock.manage')}}"><i class="fa fa-folder-o"></i> Stocks</a>
                 </li>
                 <li>
-                <a><i class="fa fa-suitcase"></i> purchase </span></a>
-                
+                <a><i class="fa fa-suitcase"></i> purchase <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="{{route('add.purchase')}}">Add purchase</a></li>
+                    <li><a href="">Manage purchase</a></li>
+
+
+                </ul>
             </li>
+            <li>
+                <a><i class="fa fa-money"></i> Payments <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="{{route('customer.payment')}}">Customer Payment</a></li>
+                    <li><a href="{{route('supplier.payment')}}">Supplier  Payment</a></li>
+
+
+                </ul>
+            </li>
+            <li>
+            <a href="{{url('/Report')}}"><i class="fa fa-file-pdf-o"></i> Report</a>
+                </li>
+                
         </ul>
     </div>
 

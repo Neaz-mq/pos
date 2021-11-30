@@ -10,6 +10,10 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\backend\ProductController;
 use App\Http\Controllers\backend\CategoryController;
+use App\Http\Controllers\backend\StockController;
+use App\Http\Controllers\backend\PurchaseController;
+use App\Http\Controllers\backend\PaymentController;
+use App\Http\Controllers\backend\ReportController;
 
 
 
@@ -26,10 +30,16 @@ use App\Http\Controllers\backend\CategoryController;
 */
 
 
+
+
+
 Route::get('/',[StoreController::class,'store']);
 Route::get('/POS',[PosController::class,'Point_of_Sale'])->name('POS.Point_of_Sale');
 Route::get('/Dashboard',[DashboardController::class,'Dashboard']);
+//Sale
 Route::get('/Sales',[SaleController::class,'Sales']);
+
+
 
 
 
@@ -43,10 +53,17 @@ Route::post('/product/post',[ProductController::class,'store'])->name('product.p
 
 // category
 Route::get('/category/list',[CategoryController::class,'list'])->name('category.list');
-Route::post('/category/add',[CategoryController::class,'add'])->name('caterogy.add'); 
+Route::post('/category/add',[CategoryController::class,'add'])->name('caterogy.add');
+
+// Stock
+Route::get('/stock/manage',[StockController::class,'store'])->name('stock.manage');
 
 //start user
 Route::get('/adduser',[UserController::class,'adduser'])->name('add.user');
+Route::get('/user/manage',[UserController::class,'user_manage'])->name('user.manage');
+
+    
+
 //end user
 
 // Customer
@@ -58,3 +75,16 @@ Route::post('/customer/post',[CustomerController::class,'store'])->name('custome
 Route::get('/add/supplier', [SupplierController::class,'addsupplier'])->name('add.supplier');
 Route::get('/supplier/manage',[SupplierController::class,'supplier_manage'])->name('supplier.manage');
 Route::post('/supplier/post',[SupplierController::class,'store'])->name('supplier.post');
+
+
+//purchase
+Route::get('/add/purchase', [PurchaseController::class,'addpurchase'])->name('add.purchase');
+
+
+//payment
+Route::get('/customer/payment', [PaymentController::class,'customer_payment'])->name('customer.payment');
+Route::get('/supplier/payment', [PaymentController::class,'supplier_payment'])->name('supplier.payment');
+
+//Report
+
+Route::get('/Report',[ReportController::class,'reports']);

@@ -26,23 +26,22 @@
 
                             <div class="item form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Supplier Name
-                                    <span class="required">*</span>
+
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input id="name" class="form-control col-md-7 col-xs-12"
                                         data-validate-length-range="6" data-validate-words="2" name="name"
-                                        placeholder="Enter supplier name" required="required" type="text">
+                                        placeholder="Enter supplier name" type="text">
                                 </div>
                             </div>
 
                             <div class="item form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email <span
-                                        class="required">*</span>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input id="email" class="form-control col-md-7 col-xs-12"
                                         data-validate-length-range="6" data-validate-words="2" name="email"
-                                        placeholder="Enter email" required="required" type="email">
+                                        placeholder="Enter email" type="email">
                                 </div>
                             </div>
 
@@ -55,25 +54,22 @@
 
 
                             <div class="item form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Address<span
-                                        class="required">*</span>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Address
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" id="address" name="address" data-validate-linked="address"
-                                        required="required" placeholder="Enter address"
-                                        class="form-control col-md-7 col-xs-12">
+                                        placeholder="Enter address" class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
 
 
                             <div class="item form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="telephone">Phone
-                                    Number<span class="required">*</span>
+                                    Number
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="tel" id="telephone" name="telephone" required="required"
-                                        placeholder="Enter phone number" data-validate-length-range="8,20"
-                                        class="form-control col-md-7 col-xs-12">
+                                    <input type="tel" id="telephone" name="telephone" placeholder="Enter phone number"
+                                        data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
 
