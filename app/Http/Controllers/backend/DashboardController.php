@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function Dashboard(){
+    public function dashboard(){
         $title='Dashboard';
         return view('backend.layouts.Dashboard',compact ('title'));
     }

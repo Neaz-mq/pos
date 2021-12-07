@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 class SaleController extends Controller
 {
     public function Sales(){
-        $title='Manage Sales';
-        return view('backend.layouts.sales',compact ('title'));
+        
+        return view('backend.layouts.sales');
 
     }
 }

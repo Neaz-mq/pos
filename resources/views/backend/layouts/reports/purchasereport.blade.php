@@ -3,7 +3,7 @@
 <div class="" role="">
     <div class="">
         <div class="page-title">
-            <h3>Manage Sales</h3>
+            <h3>Payments</h3>
 
 
 
@@ -18,17 +18,18 @@
                     <div class="x_content">
 
                         <table class="table">
-                            <span class="section">Manage Products</span>
+                            <span class="section">Supplier Payments</span>
                             <thead>
                                 <tr>
-                                <th>No</th>
-                                    <th scope="col">Invoice No</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Customer</th>
-                                    <th scope="col">Total price </th>
-                                    <th scope="col">Sale by</th>
                                     
-                                    <th>Action</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Amount </th>
+                                    <th scope="col">Pay amount</th>
+                                    <th scope="col">Pay method</th>
+                                    <th scope="col">Due</th>
+                                    <th scope="col">Reference</th>
+                                    <!-- <th>Action</th> -->
                                     
 
                                 </tr>

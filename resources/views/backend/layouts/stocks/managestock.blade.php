@@ -21,7 +21,7 @@
                             <span class="section">Manage Stocks</span>
                             <thead>
                                 <tr>
-                                    
+                                <th>SL</th>
                                     <th scope="col">Item</th>
                                     <th scope="col">Available Stock</th>
                                     

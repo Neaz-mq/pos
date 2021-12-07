@@ -11,4 +11,8 @@ class PurchaseController extends Controller
         
         return view('backend.layouts.purchase.addpurchase');
     }
+    public function manage_purchase(){
+        
+        return view('backend.layouts.purchase.managepurchase');
+    }
 }

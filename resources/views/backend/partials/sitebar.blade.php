@@ -3,22 +3,18 @@
 
         <ul class="nav side-menu">
             <li>
-                <a href="{{url('/Dashboard')}}"><i class="fa fa-dashboard"></i>Dashboard </a>
-                <ul class="nav child_menu">
-                    <!-- <li><a href="../admin/dashboard.php">Dashboard</a></li> -->
-                    <!--<li><a href="../admin/dashboard2.php">Dashboard2</a></li>-->
-                    <!--<li><a href="../admin/dashboard3.php">Dashboard3</a></li>-->
-                </ul>
+                <a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i>Dashboard </a>
+               
             </li>
             <li>
-                <!-- <li><a href="{{url('/POS')}}"></a></li> -->
-                <a href="{{url('/POS')}}"><i class="fa fa-cart-plus"></i> POS </a>
+                
+                <a href="{{route('pos')}}"><i class="fa fa-cart-plus"></i> POS </a>
 
                 
             </li>
 
             <li>
-                <a href="{{url('/Sales')}}"><i class="fa fa-shopping-bag"></i> Sales </a>
+                <a href="{{route('sales')}}"><i class="fa fa-shopping-bag"></i> Sales </a>
                 
             </li>
             <li>
@@ -70,7 +66,7 @@
                 <a><i class="fa fa-suitcase"></i> purchase <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="{{route('add.purchase')}}">Add purchase</a></li>
-                    <li><a href="">Manage purchase</a></li>
+                    <li><a href="{{route('manage.purchase')}}">Manage purchase</a></li>
 
 
                 </ul>
@@ -84,10 +80,20 @@
 
                 </ul>
             </li>
+            
             <li>
-            <a href="{{url('/Report')}}"><i class="fa fa-file-pdf-o"></i> Report</a>
-                </li>
-                
+                <a><i class="fa fa-file-pdf-o"></i> Report <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="{{route('report.sales')}}">Sales report</a></li>
+                    <li><a href="{{route('report.purchase')}}">Purchase report</a></li>
+
+
+                </ul>
+            </li>
+            
+            
+        </ul> 
+            
         </ul>
     </div>
 

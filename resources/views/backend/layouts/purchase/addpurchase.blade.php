@@ -57,7 +57,7 @@
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Quantity
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" id="address" name="quantity" 
+                                    <input type="text" id="quantity" name="quantity" 
                                         placeholder="Enter quantity"
                                         class="form-control col-md-7 col-xs-12">
                                 </div>
@@ -73,6 +73,18 @@
                                          data-validate-length-range="8,20"
                                         class="form-control col-md-7 col-xs-12">
                                 </div>
+                            </div>
+                            
+                            <div class="item form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Supplier
+                                    
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                <select id="name" name="name">
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                    </div>
                             </div>
 
 

@@ -27,7 +27,7 @@
                                     <th scope="col">Product description</th>
                                     <th scope="col">Product Category</th>
                                     <th scope="col">Availability</th>
-                                    <!-- <th>Action</th> -->
+                                    <th>Action</th>
                                     
 
                                 </tr>
@@ -42,7 +42,10 @@
                                     <td>{{ $products->description}}</td>
                                     <td>{{ $products->category->name}}</td>
                                     <td>{{ $products->availabilty}}</td>
-                                    
+                                    <td>
+                                        <a href=""><i class="fa fa-pencil-square-o" style="font-size:24px"></i></a>
+                                        <a href=""><i class="fa fa-close" style="font-size:24px;color:red"></i></a>
+                                    </td>
 
                                 </tr>
                                 @endforeach

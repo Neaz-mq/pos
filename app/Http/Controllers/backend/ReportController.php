@@ -7,9 +7,14 @@ use Illuminate\Http\Request;
 
 class ReportController extends Controller
 {
-    public function reports(){
-        $title='Manage report';
-        return view('backend.layouts.report',compact ('title'));
+    public function sales_report(){
+       
+        return view('backend.layouts.reports.salesreport');
+
+    }
+    public function purchase_report(){
+       
+        return view('backend.layouts.reports.purchasereport');
 
     }
 }

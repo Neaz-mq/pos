@@ -34,10 +34,16 @@ use App\Http\Controllers\backend\ReportController;
 
 
 Route::get('/',[StoreController::class,'store']);
-Route::get('/POS',[PosController::class,'Point_of_Sale'])->name('POS.Point_of_Sale');
-Route::get('/Dashboard',[DashboardController::class,'Dashboard']);
+
+
+//Dashboard
+Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('dashboard');
+
+//POS
+Route::get('/pos',[PosController::class,'Point_of_Sale'])->name('pos');
+
 //Sale
-Route::get('/Sales',[SaleController::class,'Sales']);
+Route::get('/sales',[SaleController::class,'Sales'])->name('sales');
 
 
 
@@ -79,7 +85,7 @@ Route::post('/supplier/post',[SupplierController::class,'store'])->name('supplie
 
 //purchase
 Route::get('/add/purchase', [PurchaseController::class,'addpurchase'])->name('add.purchase');
-
+Route::get('/manage/purchase',[PurchaseController::class,'manage_purchase'])->name('manage.purchase');
 
 //payment
 Route::get('/customer/payment', [PaymentController::class,'customer_payment'])->name('customer.payment');
@@ -87,4 +93,5 @@ Route::get('/supplier/payment', [PaymentController::class,'supplier_payment'])->
 
 //Report
 
-Route::get('/Report',[ReportController::class,'reports']);
+Route::get('/report/sales', [ReportController::class,'sales_report'])->name('report.sales');
+Route::get('/report/purchase', [ReportController::class,'purchase_report'])->name('report.purchase');

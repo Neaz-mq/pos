@@ -66,11 +66,11 @@
 
 
                             <div class="item form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="category">Category
-                                    <span class="required">*</span>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">Category
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <select id="category" name="category">
+                                    <select type="text" id="category" name="category" required="required"
+                                         class="form-control col-md-7 col-xs-12">
                                         @foreach ($categories as $category)
 
 
@@ -82,9 +82,12 @@
                             </div>
 
 
+                            
+
+
                             <div class="item form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="availability">Available
-                                    <span class="required">*</span>
+                                    
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <select id="availability" name="availability">
