@@ -24,9 +24,10 @@
                                 <th>No</th>
                                     <th scope="col">Purchase Id</th>
                                     <th scope="col">Date</th>
+                                    <th scope="col">Challan No</th>
                                     <th scope="col">Supplier</th>
                                     <th scope="col">Total price </th>
-                                    <th scope="col">Received by</th>
+                                    <!-- <th scope="col">Received by</th> -->
                                     
                                     <!-- <th>Action</th> -->
                                     

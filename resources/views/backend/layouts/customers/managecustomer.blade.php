@@ -21,12 +21,14 @@
                             <span class="section">Manage Customers</span>
                             <thead>
                                 <tr>
+                                    <th>SL</th>
                                     
                                     <th scope="col">Name</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Address</th>
                                     <th scope="col">Phone number</th>
-                                    <!-- <th>Action</th> -->
+                                    <th>Action</th>
+                                    
                                     
 
                                 </tr>
@@ -34,13 +36,16 @@
                             <tbody>
                             @foreach ($customers as $customer)
                                 <tr>
-                                    
+                                <td>{{ $loop->iteration }}</td>
                                     <td>{{$customer->name}}</td>
                                     <td>{{$customer->email}}</td>
                                     <td>{{$customer->address}}</td>
                                     <td>{{$customer->telephone}}</td>
                                     
-                                    
+                                    <td>
+                                        <a href=""><i class="fa fa-pencil-square-o" style="font-size:24px"></i></a>
+                                        <a href=""><i class="fa fa-close" style="font-size:24px;color:red"></i></a>
+                                    </td> 
 
                                 </tr>
                                 @endforeach

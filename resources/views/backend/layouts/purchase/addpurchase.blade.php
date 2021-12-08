@@ -62,6 +62,39 @@
                                         class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
+                            <div class="ln_solid"></div>
+                            <div class="form-group">
+                                <div class="col-md-6 col-md-offset-3">
+                                    
+                                    <button id="send" type="submit" class="btn btn-success">Save</button>
+                                </div>
+                            </div>
+
+                            <br>
+                        <br>
+                        
+                        <table class="table">
+                            
+                            <thead>
+                                <tr>
+                                    
+                                <th>SL</th>
+                                    <th scope="col">Product name</th>
+                                    <th scope="col">Buy price</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Sub total</th>
+                                    <!-- <th>Action</th> -->
+                                    
+
+                                </tr>
+                            </thead>
+                            
+
+                            
+                        </table>
+<br>
+<br>
+<br>
 
 
                             <div class="item form-group">
@@ -76,15 +109,30 @@
                             </div>
                             
                             <div class="item form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Challan No
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="number" id="number" name="number" 
+                                       
+                                        class="form-control col-md-7 col-xs-12">
+                                </div>
+                            </div>
+                            
+                            <div class="item form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Supplier
                                     
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                <select id="name" name="name">
+                                    <select type="text" id="SupplierName" name="name" 
+                                         class="form-control col-md-7 col-xs-12">
+                                       
+
+
                                         <option value=""></option>
-                                        <option value=""></option>
+
+                                        
                                     </select>
-                                    </div>
+                                </div>
                             </div>
 
 
@@ -94,7 +142,7 @@
                             <div class="ln_solid"></div>
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-3">
-                                    <button type="submit" class="btn btn-primary">Cancel</button>
+                                    
                                     <button id="send" type="submit" class="btn btn-success">Submit</button>
                                 </div>
                             </div>

@@ -21,13 +21,14 @@
                             <span class="section">Manage Users</span>
                             <thead>
                                 <tr>
+                                    <th>SL</th>
                                     
                                     <th scope="col">User Name</th>
                                     <th scope="col">Full Name</th>
                                     <th scope="col">Type</th>
                                     <th scope="col">Phone</th>
                                     
-                                    <!-- <th>Action</th>  -->
+                                     <th>Action</th>  
                                     
 
                                 </tr>
