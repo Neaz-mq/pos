@@ -85,7 +85,12 @@ Route::post('/supplier/post',[SupplierController::class,'store'])->name('supplie
 
 //purchase
 Route::get('/add/purchase', [PurchaseController::class,'addpurchase'])->name('add.purchase');
+Route::post('/purchase/post',[PurchaseController::class,'purchasedetails'])->name('purchasedetails.post');
 Route::get('/manage/purchase',[PurchaseController::class,'manage_purchase'])->name('manage.purchase');
+
+
+
+
 
 //payment
 Route::get('/customer/payment', [PaymentController::class,'customer_payment'])->name('customer.payment');

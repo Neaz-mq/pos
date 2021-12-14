@@ -17,8 +17,7 @@
 
                     <div class="x_content">
 
-                        <form action="" method="" class="form-horizontal form-label-left"
-                            novalidate>
+                        <form action="{{route('purchasedetails.post')}}" method="post" class="form-horizontal form-label-left" novalidate>
 
 
                             <span class="section">Add purchase</span>
@@ -26,15 +25,54 @@
 
                             <div class="item form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Product name
-                                    
+
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input id="name" class="form-control col-md-7 col-xs-12"
-                                        data-validate-length-range="6" data-validate-words="2" name="name"
-                                        placeholder="Enter product name"  type="text">
+                                    <select type="text" id="ProductName" name="name"
+                                        class="form-control col-md-7 col-xs-12">
+
+
+
+                                        @foreach ($products as $product)
+
+
+                                        <option value="{{$product->id}}">{{$product->name}}</option>
+
+                                        @endforeach
+
+                                    </select>
                                 </div>
                             </div>
+                            <div class="item form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Challan No
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="number" id="number" name="number" 
+                                        class="form-control col-md-7 col-xs-12">
+                                </div>
+                            </div>
+                            <div class="item form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Supplier
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select type="text" id="SupplierName" name="name"
+                                        class="form-control col-md-7 col-xs-12">
 
+
+
+                                        @foreach ($suppliers as $supplier)
+
+
+                                        <option value="{{$supplier->id}}">{{$supplier->name}}</option>
+
+                                        @endforeach
+
+
+
+                                    </select>
+                            </div>
+                            
+                            </div>
                             <div class="item form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="price">Buy price
                                 </label>
@@ -44,110 +82,39 @@
                                         placeholder="Enter price" type="text">
                                 </div>
                             </div>
-
-
-
-
-
-
-
-
-
                             <div class="item form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Quantity
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" id="quantity" name="quantity" 
-                                        placeholder="Enter quantity"
+                                    <input type="number" id="number" name="quantity" 
                                         class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
+                            <div class="item form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Purchase date
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="date" id="date" name="date" 
+                                        class="form-control col-md-7 col-xs-12">
+                                </div>
+                            </div>
+                           
+                            
+                            
+                           
+                            
+                            
                             <div class="ln_solid"></div>
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-3">
-                                    
-                                    <button id="send" type="submit" class="btn btn-success">Save</button>
-                                </div>
-                            </div>
 
-                            <br>
-                        <br>
-                        
-                        <table class="table">
-                            
-                            <thead>
-                                <tr>
-                                    
-                                <th>SL</th>
-                                    <th scope="col">Product name</th>
-                                    <th scope="col">Buy price</th>
-                                    <th scope="col">Quantity</th>
-                                    <th scope="col">Sub total</th>
-                                    <!-- <th>Action</th> -->
-                                    
-
-                                </tr>
-                            </thead>
-                            
-
-                            
-                        </table>
-<br>
-<br>
-<br>
-
-
-                            <div class="item form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="telephone">Purchase date
-                                    
-                                </label>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="date" id="date" name="purchase_date"
-                                         data-validate-length-range="8,20"
-                                        class="form-control col-md-7 col-xs-12">
-                                </div>
-                            </div>
-                            
-                            <div class="item form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Challan No
-                                </label>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="number" id="number" name="number" 
-                                       
-                                        class="form-control col-md-7 col-xs-12">
-                                </div>
-                            </div>
-                            
-                            <div class="item form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Supplier
-                                    
-                                </label>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <select type="text" id="SupplierName" name="name" 
-                                         class="form-control col-md-7 col-xs-12">
-                                       
-
-
-                                        <option value=""></option>
-
-                                        
-                                    </select>
-                                </div>
-                            </div>
-
-
-
-
-
-                            <div class="ln_solid"></div>
-                            <div class="form-group">
-                                <div class="col-md-6 col-md-offset-3">
-                                    
                                     <button id="send" type="submit" class="btn btn-success">Submit</button>
                                 </div>
                             </div>
                         </form>
-                    </div>
+
+                        
+                  
                 </div>
             </div>
         </div>

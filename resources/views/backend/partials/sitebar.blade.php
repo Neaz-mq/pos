@@ -63,14 +63,14 @@
                 <a href="{{route('stock.manage')}}"><i class="fa fa-folder-o"></i> Stocks</a>
                 </li>
                 <li>
-                <a><i class="fa fa-suitcase"></i> purchase <span class="fa fa-chevron-down"></span></a>
+                <a><i class="fa fa-suitcase"></i> Purchase <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="{{route('add.purchase')}}">Add purchase</a></li>
                     <li><a href="{{route('manage.purchase')}}">Manage purchase</a></li>
 
 
                 </ul>
-            </li>
+            </li> 
             <li>
                 <a><i class="fa fa-money"></i> Payments <span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
