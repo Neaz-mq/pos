@@ -21,17 +21,31 @@
                             <span class="section">Manage Stocks</span>
                             <thead>
                                 <tr>
-                                <th>SL</th>
+                                    <th>SL</th>
                                     <th scope="col">Item</th>
                                     <th scope="col">Available Stock</th>
-                                    
+
                                     <!-- <th>Action</th> -->
-                                    
+
 
                                 </tr>
                             </thead>
 
-                           
+                            <tbody>  
+                            @foreach ($stocks as $stock)
+                                <tr>
+                                  
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $stock->product->name}}</td>
+                                    <td>{{ $stock->purchase->quantity}}</td>
+                                    
+                                    
+                                   
+                                </tr>
+                                @endforeach
+
+                            </tbody>
+
                         </table>
                     </div>
                 </div>

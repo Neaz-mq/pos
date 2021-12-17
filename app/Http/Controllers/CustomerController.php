@@ -13,7 +13,7 @@ class CustomerController extends Controller
         return view('backend.layouts.customers.addcustomer');
     }
     public function store(Request $request){
-        //  dd($request->all());
+        // dd($request->all());
         Customer::create([
             // name for db field || name for form fields
              'name'=>$request->name,

@@ -22,17 +22,10 @@
                             <thead>
                                 <tr>
                                     <th>No.</th>
-                                    <th scope="col">Product name</th>
+                                    <th scope="col">Purchase id</th>
                                     <th scope="col">Challan No</th>
                                     <th scope="col">Supplier</th>
-                                    
-                                    <th scope="col">Unit price</th>
-                                    <th scope="col">Quantity</th>
-
-
-                                    
-                                    <th scope="col">Sub total</th>
-                                    
+                                    <th scope="col">Total price</th>                         
                                     <th scope="col">Date</th>
                                     <!-- <th scope="col">Received by</th> -->
 
@@ -41,33 +34,27 @@
 
                                 </tr>
                             </thead>
-                            @php
-                                $subtotal = 0;
-                            @endphp
-                            <tbody>  
-                            @foreach ($purchases as $purchase)
+                            <tbody>
+                            @foreach ($purchasehistories as $purchasehistory)
                                 <tr>
-                                    @php
-                                        $quantity = $purchase->quantity;
-                                        $price = $purchase->unit_price;
-                                        $subtotal = $price * $quantity;
-                                        
-                                    @endphp
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $purchase->product->name}}</td>
-                                    <td>{{ $purchase->challan_no}}</td>
-                                    <td>{{ $purchase->supplier->name}}</td>
-                                    <td>{{ $purchase->unit_price}}</td>
-                                    <td>{{ $purchase->quantity}}</td>
-                                    <td>{{ $subtotal}}</td>
-                                    <td>{{ $purchase->date}}</td>
+                                <td>{{ $loop->iteration }}</td>
+                                    <td>{{$purchasehistory->purchase_id}}</td>
+                                    <td>{{$purchasehistory->challan_no}}</td>
+                                    <td>{{$purchasehistory->supplier->name}}</td>
+                                    <td>{{$purchasehistory->total_price}}</td>
+                                    <td>{{$purchasehistory->date}}</td>
                                     
-                                   
+                                    <td>
+                            <a href="{{route('add.purchase', $purchase->id)}}"></a>
+
+                        </td>
+
+
                                 </tr>
                                 @endforeach
 
-                            </tbody>
-
+                            </tbody> 
+                            
                         </table>
                     </div>
                 </div>
