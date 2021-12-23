@@ -7,8 +7,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Supplier;
+use App\Models\purchasedetails;
 use App\Models\Purchase;
-use App\Models\Purchasehistory;
 use App\Models\Stock;
 
 use Illuminate\Http\Request;
@@ -51,23 +51,174 @@ class PurchaseController extends Controller
       public function manage_purchase(){
         
        
-        $purchasehistories=Purchasehistory::all();
+        $purchasehistories=Purchase::all();
+        //dd($purchasehistories)->all();
        
         return view('backend.layouts.purchase.managepurchase',compact('purchasehistories'));
      }
-     public function purchasehistory(Request $request){
-        //dd($request->all());
-        Purchasehistory::create([
-            // name for db field || name for form fields
-            
-            'purchase_id'=> $request->purchase,
-            'challan_no'=>$request->number,
+
+     public function details($id){
+        
+       
+        $details=purchasedetails::where('purchase_id',$id)->get();
+        //dd($purchasehistories)->all();
+       
+        return view('backend.layouts.purchase.purchasedetails',compact('details'));
+     }
+    
+
+
+     public function cart(Request $request)
+     {
+ 
+ 
+ 
+         $product = Product::find($request->name);
+        
+ 
+         if(!$product) {
+ 
+ 
+             abort(404);
+ 
+         }
+         //dd($purchase->all());
+ 
+         $cart = session()->get('cart');
+ 
+ 
+         // if cart is empty then this the first product
+         if(!$cart) {
+ 
+             $cart = [
+                     $product->id => [
+                         'purchase_id' => $product->purchase_id,
+                         'product_id' => $product->id,
+                         "name" => $product->name,
+                         "price" => $request->price,
+                         "quantity" => $request->quantity,
+                         "sub_total"=>$request->price *$request->quantity
+                     ]
+             ];
+ 
+             session()->put('cart', $cart);
+ 
+ 
+ 
+             return redirect()->back()->with('success', 'Product added to cart successfully!');
+         }
+ 
+         // if cart not empty then check if this product exist then increment quantity
+         if(isset($cart[$product->id])) {
+ 
+             $cart[$product->id]['price']=$request->price;
+             $cart[$product->id]['quantity']= $cart[$product->id]['quantity']+$request->quantity;
+ 
+             session()->put('cart', $cart);
+ 
+             return redirect()->back()->with('success', 'Product added to cart successfully!');
+ 
+         }
+ 
+         // if item not exist in cart then add to cart with quantity = 1
+         $cart[$product->id] = [
+                         'purchase_id' => $product->purchase_id,
+                         'product_id' => $product->id,
+                         "name" => $product->name,
+                         "price" => $request->price,
+                         "quantity" => $request->quantity,
+                         "sub_total"=>$request->price *$request->quantity
+         ];
+ 
+         session()->put('cart', $cart);
+ 
+         return redirect()->back()->with('success', 'Product added to cart successfully!');
+     }
+     public function purchase_forget (Request $request)
+     {
+         if(session()->has('cart'))
+         {
+             $request->session()->forget('cart');
+             return redirect()->back();
+         }
+ 
+ return redirect()->back();
+ 
+     }
+ 
+     public function purchases_delete($id){
+         $purchasedel=Purchase::find($id);
+         if($purchasedel){
+             $purchasedel->delete();
+             return redirect()->back()->with('message','Product is Deleted');
+         }
+ 
+     }
+
+
+     public function cart_post( Request $request){
+
+        //$request->session()->flash('cart');
+        $carts=session()->get('cart');
+
+        $total=array_sum(array_column($carts,'sub_total'));
+
+        $saleid=Purchase::create([
+            'purchase_date'=>$request->date,
             'supplier_id'=>$request->name,
-            'total_price'=>$request->price,
-            'date'=>$request->date
+            'challan_no'=>$request->number,
+            'total_price'=>$total
+            // 'sale_by'=>auth()->user()->id,
+
         ]);
-        return redirect()->route('manage.purchases');      
-    } 
+
+
+        $carts=session()->get('cart');
+
+
+
+            foreach ($carts as $cart){
+
+          $details =  Purchasedetails::create([
+                'purchase_id' => $saleid->id,
+                'product_id' => $cart['product_id'],
+                'qty' => $cart['quantity'],
+                'unit_price' => $cart['price'],
+                'sub_total' => $cart['price'] * $cart['quantity'],
+            ]);
+
+
+            $stock=Stock::where('product_id',$cart['product_id'])->first();
+
+//dd($stock);
+
+if($stock)
+{
+    $stock->update([
+        'quantity' =>$stock->quantity + $cart['quantity']
+    ]);
+
+}
+else
+{
+
+    Stock::create([
+
+        'product_id'=>$cart['product_id'],
+        'quantity'=> $cart['quantity'],
+
+    ]);
+}
+
+
+
+    }
+    $request->session()->forget('cart');
+return redirect()->route('manage.purchases',$saleid);
+
+
+}
+
 
    
     }

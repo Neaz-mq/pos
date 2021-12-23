@@ -1,5 +1,10 @@
 @extends('backend.master')
 @section('content')
+
+@php
+    $total=0;
+@endphp
+                    
 <div class="" role="">
     <div class="">
         <div class="page-title">
@@ -22,12 +27,10 @@
                             <thead>
                                 <tr>
                                     <th>No.</th>
-                                    <th scope="col">Purchase id</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Challan No</th>
-                                    <th scope="col">Supplier</th>
-                                    <th scope="col">Total price</th>                                                             
-                                    <th scope="col">Action</th>
+                                    <th scope="col">Product Name</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Unit price</th>                         
+                                    <th scope="col">Sub total</th>
                                     <!-- <th scope="col">Received by</th> -->
 
                                     <!-- <th>Action</th> -->
@@ -36,20 +39,21 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            @foreach ($purchasehistories as $purchasehistory)
+                            
+                            @foreach ($details as $detail)
+
+                            @php
+                            
+                            $total=$detail->sub_total+ $total;
+                            @endphp
                                 <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                    <td>{{$purchasehistory->id}}</td>
-                                    <td>{{$purchasehistory->purchase_date}}</td>
-                                    <td>{{$purchasehistory->challan_no}}</td>
-                                    <td>{{$purchasehistory->supplier->name}}</td>
-                                    <td>{{$purchasehistory->total_price}}</td>
-
+                                    <td>{{$detail->product->name}}</td>
+                                    <td>{{$detail->qty}}</td>
+                                    <td>{{$detail->unit_price}}</td>
+                                    <td>{{$detail->sub_total}}</td>
                                     
-                                    <td>
-                            <a href="{{route('details', $purchasehistory->id)}}"><i class="fa fa-list" style="font-size:24px"></i></a>
-
-                        </td>
+                                   
 
 
                                 </tr>
@@ -58,6 +62,9 @@
                             </tbody> 
                             
                         </table>
+                        
+                        <h2><td>Total: {{$total}} TK</td></h2>
+                        
                     </div>
                 </div>
             </div>

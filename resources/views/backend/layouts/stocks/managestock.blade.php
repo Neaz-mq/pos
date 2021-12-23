@@ -37,7 +37,7 @@
                                   
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $stock->product->name}}</td>
-                                    <td>{{ $stock->purchase->quantity}}</td>
+                                    <td>{{ $stock->quantity}}</td>
                                     
                                     
                                    

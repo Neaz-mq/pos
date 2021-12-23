@@ -85,11 +85,11 @@ Route::post('/supplier/post',[SupplierController::class,'store'])->name('supplie
 
 //purchase
 Route::get('/add/purchase', [PurchaseController::class,'addpurchase'])->name('add.purchase');
-Route::post('/purchase/post',[PurchaseController::class,'purchasedetails'])->name('purchasedetails.post');
 Route::get('/add/purchase', [PurchaseController::class,'addhistory'])->name('add.purchase');
 Route::get('/manage/purchases',[PurchaseController::class,'manage_purchase'])->name('manage.purchases');
-Route::post('/purchases/post',[PurchaseController::class,'purchasehistory'])->name('purchasehistory.post');
-
+Route::post('/cart/purchases',[PurchaseController::class,'cart'])->name('cart');
+Route::post('/cart/post',[PurchaseController::class,'cart_post'])->name('cart_post');
+Route::get('/purchases/details/{id}',[PurchaseController::class,'details'])->name('details');
 
 
 
