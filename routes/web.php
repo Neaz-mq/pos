@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\backend\DashboardController;
 use App\Http\Controllers\backend\StoreController;
 use App\Http\Controllers\backend\PosController;
-use App\Http\Controllers\backend\SaleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\SupplierController;
@@ -41,10 +40,11 @@ Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('dashboa
 
 //POS
 Route::get('/pos',[PosController::class,'Point_of_Sale'])->name('pos');
-
-//Sale
-Route::get('/sales',[SaleController::class,'Sales'])->name('sales');
-
+Route::get('/sale/details/{id}',[PosController::class,'details'])->name('saledetails');
+Route::get('/sales',[PosController::class,'Sales'])->name('sales');
+Route::post('/pos/cart',[PosController::class,'poscart'])->name('poscart');
+Route::post('/cart/sale',[PosController::class,'cart'])->name('addcart');
+Route::post('/cart/post/sale',[PosController::class,'cart_post'])->name('cartpost');
 
 
 
@@ -88,7 +88,7 @@ Route::get('/add/purchase', [PurchaseController::class,'addpurchase'])->name('ad
 Route::get('/add/purchase', [PurchaseController::class,'addhistory'])->name('add.purchase');
 Route::get('/manage/purchases',[PurchaseController::class,'manage_purchase'])->name('manage.purchases');
 Route::post('/cart/purchases',[PurchaseController::class,'cart'])->name('cart');
-Route::post('/cart/post',[PurchaseController::class,'cart_post'])->name('cart_post');
+Route::post('/cart/post/purchase',[PurchaseController::class,'cart_post'])->name('cart_post');
 Route::get('/purchases/details/{id}',[PurchaseController::class,'details'])->name('details');
 
 

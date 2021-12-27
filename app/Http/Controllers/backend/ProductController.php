@@ -10,7 +10,7 @@ class ProductController extends Controller
 {
     public function addproduct(){
         $categories=Category::all();
-        // dd($product);
+        
         return view('backend.layouts.product.addproduct',compact('categories'));
     }
     public function store(Request $request){
@@ -28,6 +28,7 @@ class ProductController extends Controller
     } 
     public function product_manage(){
         $product=Product::all();
+        //dd($product);
         return view('backend.layouts.product.manageproduct',compact('product'));
     } 
     
