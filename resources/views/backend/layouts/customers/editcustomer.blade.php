@@ -4,7 +4,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>Suppliers</h3>
+                <h3>Customers</h3>
             </div>
 
 
@@ -16,42 +16,30 @@
                 <div class="x_panel">
 
                     <div class="x_content">
-                    <div>
-        @if($errors->any())
-              <div class="alert alert-danger">
-                <ul>
-                  @foreach ($errors->all() as $error)
-                  <li>{{$error}}</li>
-                  @endforeach
-                  
-                </ul>
-              </div>
-            @endif
-        </div>
 
-                        <form action="{{route('supplier.post')}}" method="post" class="form-horizontal form-label-left"
+                        <form action="{{route('customer.update',$customers->id)}}" method="post" class="form-horizontal form-label-left"
                             novalidate>
 
 
-                            <span class="section">Add supplier</span>
+                            <span class="section">Add customer</span>
                             @csrf
-
+                            @method('put')
                             <div class="item form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Supplier Name
-
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name
+                                    
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input id="name" class="form-control col-md-7 col-xs-12"
+                                    <input  value="{{$customers->name}}" id="name" class="form-control col-md-7 col-xs-12"
                                         data-validate-length-range="6" data-validate-words="2" name="name"
-                                        placeholder="Enter supplier name" type="text">
+                                        placeholder="Customer name"  type="text">
                                 </div>
                             </div>
 
                             <div class="item form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email 
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input id="email" class="form-control col-md-7 col-xs-12"
+                                    <input  value="{{$customers->email}}" id="email" class="form-control col-md-7 col-xs-12"
                                         data-validate-length-range="6" data-validate-words="2" name="email"
                                         placeholder="Enter email" type="email">
                                 </div>
@@ -69,8 +57,9 @@
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Address
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" id="address" name="address" data-validate-linked="address"
-                                        placeholder="Enter address" class="form-control col-md-7 col-xs-12">
+                                    <input value="{{$customers->address}}" type="text" id="address" name="address" data-validate-linked="address"
+                                        placeholder="Enter address"
+                                        class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
 
@@ -80,8 +69,9 @@
                                     Number
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="tel" id="telephone" name="telephone" placeholder="Enter phone number"
-                                        data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12">
+                                    <input  value="{{$customers->telephone}}"type="tel" id="telephone" name="telephone"
+                                        placeholder="Enter phone number" data-validate-length-range="8,20"
+                                        class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
 
@@ -104,3 +94,4 @@
     </div>
 </div>
 @endsection
+

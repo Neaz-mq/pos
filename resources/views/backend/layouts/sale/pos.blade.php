@@ -5,7 +5,22 @@
         <div class="page-title">
             <div class="title_left">
                 <h3>Point of Sale </h3>
+                <div>
+                
+
+
+                @if(session()->has('message'))
+                    <div class="row" style="padding: 20px;">
+                        <span
+                            class="alert alert-warning">{{ session()->get('message') }}</span>
+                    </div>
+                @endif
+                
+                </div>
             </div>
+
+           
+
         </div>
         <div class="clearfix"></div>
 
@@ -77,7 +92,8 @@
                                         <th scope="col">Quantity</th>
                                         <th scope="col">Price</th>
                                         <th scope="col">Sub total</th>
-                                        <!-- <th>Action</th> -->
+                                        <th><i class="fa fa-trash"></th>
+                                       
 
                                     </tr>
                                 </thead>
@@ -96,6 +112,8 @@
                                         <td>{{$carts['qty']}}</td>
                                         <td>{{$carts['price']}}</td>
                                         <td>{{ $subtotal }}</td>
+                                        <td><a href="{{route('forget')}}"><i class="fa fa-trash"></i></a></td>
+                                        
 
 
                                     </tr>
@@ -121,7 +139,8 @@
 
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input required type="date" value="{{ date('d-m-y') }}" min="{{ date('d-m-y') }}"
+                                    <input required type="date" value="{{ date('Y-m-d') }}"
+                                        min="{{ date('Y-m-d') }}"
                                         class="form-control" id="sale_date" name="sale_date">
                                 </div>
                             </div>

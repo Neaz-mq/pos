@@ -19,6 +19,15 @@
 
                         <table class="table">
                             <span class="section">Manage Suppliers</span>
+                            <div>
+
+                                @if(session()->has('message'))
+                                <div class="row" style="padding: 20px;">
+                                    <span class="alert alert-success">{{session()->get('message')}}</span>
+                                </div>
+                                @endif
+
+                            </div>
                             <thead>
                                 <tr>
                                     
@@ -26,7 +35,7 @@
                                     <th scope="col">Email</th>
                                     <th scope="col">Address</th>
                                     <th scope="col">Phone number</th>
-                                    <!-- <th>Action</th> -->
+                                     <th>Action</th>
                                     
 
                                 </tr>
@@ -39,7 +48,13 @@
                                     <td>{{$supplier->email}}</td>
                                     <td>{{$supplier->address}}</td>
                                     <td>{{$supplier->telephone}}</td>
-                                    
+                                    <td class="">
+                                        <a href="{{route('supplier.edit',$supplier->id)}}"><i
+                                                class="fa fa-pencil-square-o" style="font-size:24px"></i></a>
+
+                                        <a onclick="return confirm('Are you sure want to delete this item?');" href="{{route('supplier.delete',$supplier->id)}}"><i class="fa fa-close"
+                                                style="font-size:24px;color:red"></i></a>
+                                    </td>
                                     
 
                                 </tr>

@@ -16,32 +16,21 @@
                 <div class="x_panel">
 
                     <div class="x_content">
-                    <div>
-        @if($errors->any())
-              <div class="alert alert-danger">
-                <ul>
-                  @foreach ($errors->all() as $error)
-                  <li>{{$error}}</li>
-                  @endforeach
-                  
-                </ul>
-              </div>
-            @endif
-        </div>
+                       
 
-                        <form action="{{route('supplier.post')}}" method="post" class="form-horizontal form-label-left"
+                        <form action="{{route('supplier.update',$suppliers->id)}}" method="post" class="form-horizontal form-label-left"
                             novalidate>
 
 
                             <span class="section">Add supplier</span>
                             @csrf
-
+                            @method('put')
                             <div class="item form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Supplier Name
 
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input id="name" class="form-control col-md-7 col-xs-12"
+                                    <input value="{{$suppliers->name}}" id="name" class="form-control col-md-7 col-xs-12"
                                         data-validate-length-range="6" data-validate-words="2" name="name"
                                         placeholder="Enter supplier name" type="text">
                                 </div>
@@ -51,7 +40,7 @@
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input id="email" class="form-control col-md-7 col-xs-12"
+                                    <input  value="{{$suppliers->email}}" id="email" class="form-control col-md-7 col-xs-12"
                                         data-validate-length-range="6" data-validate-words="2" name="email"
                                         placeholder="Enter email" type="email">
                                 </div>
@@ -69,7 +58,7 @@
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Address
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" id="address" name="address" data-validate-linked="address"
+                                    <input  value="{{$suppliers->address}}" type="text" id="address" name="address" data-validate-linked="address"
                                         placeholder="Enter address" class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
@@ -80,7 +69,7 @@
                                     Number
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="tel" id="telephone" name="telephone" placeholder="Enter phone number"
+                                    <input  value="{{$suppliers->telephone}}" type="tel" id="telephone" name="telephone" placeholder="Enter phone number"
                                         data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>

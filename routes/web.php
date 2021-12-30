@@ -45,7 +45,7 @@ Route::get('/sales',[PosController::class,'Sales'])->name('sales');
 Route::post('/pos/cart',[PosController::class,'poscart'])->name('poscart');
 Route::post('/cart/sale',[PosController::class,'cart'])->name('addcart');
 Route::post('/cart/post/sale',[PosController::class,'cart_post'])->name('cartpost');
-
+Route::get('/forget',[PosController::class,'forget'])->name('forget');
 
 
 
@@ -76,12 +76,17 @@ Route::get('/user/manage',[UserController::class,'user_manage'])->name('user.man
 Route::get('/add/customer', [CustomerController::class,'addcustomer'])->name('add.customer');
 Route::get('/customer/manage',[CustomerController::class,'customer_manage'])->name('customer.manage');
 Route::post('/customer/post',[CustomerController::class,'store'])->name('customer.post');
+Route::get('/customer/edit/{id}',[CustomerController::class,'customeredit'])->name('customer.edit');
+Route::get('/customer/delete/{id}',[CustomerController::class,'customerdelete'])->name('customer.delete');
+Route::put('/customer/update/{id}',[CustomerController::class,'customerupdate'])->name('customer.update');
     
 // Supplier
 Route::get('/add/supplier', [SupplierController::class,'addsupplier'])->name('add.supplier');
 Route::get('/supplier/manage',[SupplierController::class,'supplier_manage'])->name('supplier.manage');
 Route::post('/supplier/post',[SupplierController::class,'store'])->name('supplier.post');
-
+Route::get('/supplier/edit/{id}',[SupplierController::class,'supplieredit'])->name('supplier.edit');
+Route::get('/supplier/delete/{id}',[SupplierController::class,'supplierdelete'])->name('supplier.delete');
+Route::put('/supplier/update/{id}',[SupplierController::class,'supplierupdate'])->name('supplier.update');
 
 //purchase
 Route::get('/add/purchase', [PurchaseController::class,'addpurchase'])->name('add.purchase');

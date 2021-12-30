@@ -6,9 +6,12 @@
             <div class="title_left">
                 <h3>Customers</h3>
             </div>
+             
+            
 
 
         </div>
+        
         <div class="clearfix"></div>
 
         <div class="row">
@@ -16,6 +19,7 @@
                 <div class="x_panel">
 
                     <div class="x_content">
+       
 
                         <form action="{{route('customer.post')}}" method="post" class="form-horizontal form-label-left"
                             novalidate>
@@ -29,7 +33,7 @@
                                     
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input id="name" class="form-control col-md-7 col-xs-12"
+                                    <input require id="name" class="form-control col-md-7 col-xs-12"
                                         data-validate-length-range="6" data-validate-words="2" name="name"
                                         placeholder="Customer name"  type="text">
                                 </div>
@@ -39,7 +43,7 @@
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email 
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input id="email" class="form-control col-md-7 col-xs-12"
+                                    <input require id="email" class="form-control col-md-7 col-xs-12"
                                         data-validate-length-range="6" data-validate-words="2" name="email"
                                         placeholder="Enter email" type="email">
                                 </div>
@@ -57,7 +61,7 @@
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Address
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" id="address" name="address" data-validate-linked="address"
+                                    <input require type="text" id="address" name="address" data-validate-linked="address"
                                         placeholder="Enter address"
                                         class="form-control col-md-7 col-xs-12">
                                 </div>
@@ -69,7 +73,7 @@
                                     Number
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="tel" id="telephone" name="telephone"
+                                    <input require type="tel" id="telephone" name="telephone"
                                         placeholder="Enter phone number" data-validate-length-range="8,20"
                                         class="form-control col-md-7 col-xs-12">
                                 </div>

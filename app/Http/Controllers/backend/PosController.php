@@ -60,7 +60,7 @@ class PosController extends Controller
         
         $stock=Stock::where('product_id',$product->id)->first();
 
-        if($stock->qty < $request->qty){
+        if($stock->quantity < $request->quantity){
 
             return redirect()->back()->with('message',' Requested Product Quantity is Low');
         }
@@ -119,7 +119,7 @@ class PosController extends Controller
 
 
 
-    public function pos_forget (Request $request)
+    public function forget (Request $request)
    
    
     {
