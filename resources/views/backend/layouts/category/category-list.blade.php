@@ -27,7 +27,7 @@
                                 <tr>
                                     <th scope="col">Category name</th>
                                     <th scope="col">Details</th>
-                                    <th scope="col">Action</th>
+                                    <!-- <th scope="col">Action</th> -->
 
                                 </tr>
                             </thead>
@@ -39,10 +39,10 @@
 
                                     <td>{{ $categories->name}}</td>
                                     <td>{{ $categories->details}}</td>
-                                    <td>
+                                    <!-- <td>
                                         <a href=""><i class="fa fa-edit"></a></i>
                                         <a href=""><i class="fa fa-close"></i></a>
-                                    </td>
+                                    </td> -->
 
                                 </tr>
 

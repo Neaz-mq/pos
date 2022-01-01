@@ -3,11 +3,36 @@
 <div class="" role="">
     <div class="">
         <div class="page-title">
-            <h3>Payments</h3>
+            <h3>Report</h3>
 
 
 
         </div>
+        <br>
+        <br>
+        <br>
+        <form action="#" method="get">
+            <div class="row book-form">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <span class="section">Select Date</span>
+                    <input type="date" name="from_date" placeholder="Date" required="">
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12"><br><br>
+                    <button type="submit" class="btn btn-style btn-primary w-100 px-2">Search
+                    </button>
+
+
+
+                    <button class="btn btn-primary" onclick="printDiv('printableArea')">
+                        <i class="fa fa-print"></i> Print
+                    </button>
+
+
+                </div>
+
+            </div>
+
+        </form>
 
         <div class="clearfix"></div>
         <br>
@@ -18,24 +43,21 @@
                     <div class="x_content">
 
                         <table class="table">
-                            <span class="section">Supplier Payments</span>
+                            <span class="section">Sales report</span>
                             <thead>
                                 <tr>
-                                    
+                                    <th>No.</th>
                                     <th scope="col">Date</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Amount </th>
-                                    <th scope="col">Pay amount</th>
-                                    <th scope="col">Pay method</th>
-                                    <th scope="col">Due</th>
-                                    <th scope="col">Reference</th>
-                                    <!-- <th>Action</th> -->
-                                    
+                                    <th scope="col">Challan No</th>
+                                    <th scope="col">Supplier </th>
+                                    <th scope="col">Total Price</th>
+
+
 
                                 </tr>
                             </thead>
 
-                           
+
                         </table>
                     </div>
                 </div>

@@ -4,18 +4,18 @@
         <ul class="nav side-menu">
             <li>
                 <a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i>Dashboard </a>
-               
+
             </li>
             <li>
-                
+
                 <a href="{{route('pos')}}"><i class="fa fa-cart-plus"></i>POS</a>
 
-                
+
             </li>
 
             <li>
                 <a href="{{route('sales')}}"><i class="fa fa-shopping-bag"></i>Sales</a>
-                
+
             </li>
             <li>
                 <a><i class="fa fa-users"></i>Users<span class="fa fa-chevron-down"></span></a>
@@ -56,11 +56,11 @@
             </li>
             <li>
                 <a href="{{route('category.list')}}"><i class="fa fa-cubes"></i>Categories</a>
-                
-               
+
+
             </li>
-           
-                <li>
+
+            <li>
                 <a><i class="fa fa-suitcase"></i>Purchase<span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="{{route('add.purchase')}}">Add purchase</a></li>
@@ -68,33 +68,33 @@
 
 
                 </ul>
-            </li> 
+            </li>
             <li>
                 <a href="{{route('stock.manage')}}"><i class="fa fa-folder-o"></i>Stocks</a>
-                </li>
+            </li>
             <li>
                 <a><i class="fa fa-money"></i>Payments<span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="{{route('customer.payment')}}">Customer Payment</a></li>
-                    <li><a href="{{route('supplier.payment')}}">Supplier  Payment</a></li>
+                    <li><a href="{{route('supplier.payment')}}">Supplier Payment</a></li>
 
 
                 </ul>
             </li>
-            
+
             <li>
                 <a><i class="fa fa-file-pdf-o"></i>Report<span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
-                    <li><a href="{{route('report.sales')}}">Sales report</a></li>
                     <li><a href="{{route('report.purchase')}}">Purchase report</a></li>
+                    <li><a href="{{route('report.sales')}}">Sales report</a></li>
 
 
                 </ul>
             </li>
-            
-            
-        </ul> 
-            
+
+
+        </ul>
+
         </ul>
     </div>
 
