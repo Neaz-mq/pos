@@ -54,11 +54,17 @@ Route::get('/forget',[PosController::class,'forget'])->name('forget');
 Route::get('/add/product',[ProductController::class,'addproduct'])->name('add.product');
 Route::get('/product/manage',[ProductController::class,'product_manage'])->name('product.manage');
 Route::post('/product/post',[ProductController::class,'store'])->name('product.post');
+Route::get('/product/edit/{id}',[ProductController::class,'productedit'])->name('product.edit');
+Route::get('/product/delete/{id}',[ProductController::class,'productdelete'])->name('product.delete');
+Route::put('/product/update/{id}',[ProductController::class,'productupdate'])->name('product.update');
 
 
 //category
 Route::get('/category/list',[CategoryController::class,'list'])->name('category.list');
 Route::post('/category/add',[CategoryController::class,'add'])->name('caterogy.add');
+Route::get('/category/edit/{id}',[CategoryController::class,'categoryedit'])->name('category.edit');
+Route::get('/category/delete/{id}',[CategoryController::class,'categorydelete'])->name('category.delete');
+Route::put('/category/update/{id}',[CategoryController::class,'categoryupdate'])->name('category.update');
 
 
 //Stock

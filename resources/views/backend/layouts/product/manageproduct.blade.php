@@ -19,6 +19,9 @@
 
                         <table class="table">
                             <span class="section">Manage products</span>
+                            <div>
+
+                            </div>
                             <thead>
                                 <tr>
                                     <th>No.</th>
@@ -28,23 +31,23 @@
                                     <th scope="col">Product Category</th>
                                     <th scope="col">Availability</th>
                                     <th>Action</th>
-                                    
+
 
                                 </tr>
                             </thead>
 
                             <tbody>
-                            @foreach ($product as $products)
+                                @foreach ($products as $product)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $products->name}}</td>
-                                    <td>{{ $products->price}}</td>
-                                    <td>{{ $products->description}}</td>
-                                    <td>{{ $products->category->name}}</td>
-                                    <td>{{ $products->availabilty}}</td>
+                                    <td>{{ $product->name}}</td>
+                                    <td>{{ $product->price}}</td>
+                                    <td>{{ $product->description}}</td>
+                                    <td>{{ $product->category->name}}</td>
+                                    <td>{{ $product->availabilty}}</td>
                                     <td>
-                                        <a href=""><i class="fa fa-pencil-square-o" style="font-size:24px"></i></a>
-                                        <a href=""><i class="fa fa-close" style="font-size:24px;color:red"></i></a>
+                                        <a href="{{route('product.edit',$product->id)}}"><i class="fa fa-pencil-square-o" style="font-size:24px"></i></a>
+                                        <a onclick="return confirm('Are you sure want to delete this item?');" href="{{route('product.delete',$product->id)}}"><i class="fa fa-close" style="font-size:24px;color:red"></i></a>
                                     </td>
 
                                 </tr>

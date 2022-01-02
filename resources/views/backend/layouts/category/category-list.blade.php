@@ -5,10 +5,15 @@
         <div class="page-title">
             <div class="title_left">
                 <h3>Category List</h3>
-                <!-- Button trigger modal -->
+
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                     Add Category
                 </button>
+                <div>
+
+
+
+                </div>
             </div>
 
 
@@ -23,11 +28,20 @@
                     <div class="x_content">
 
                         <table class="table">
+                            <div>
+
+                                @if(session()->has('message'))
+                                <div class="row" style="padding: 20px;">
+                                    <span class="alert alert-success">{{session()->get('message')}}</span>
+                                </div>
+                                @endif
+
+                            </div>
                             <thead>
                                 <tr>
                                     <th scope="col">Category name</th>
                                     <th scope="col">Details</th>
-                                    <!-- <th scope="col">Action</th> -->
+                                    <th scope="col">Action</th>
 
                                 </tr>
                             </thead>
@@ -39,10 +53,10 @@
 
                                     <td>{{ $categories->name}}</td>
                                     <td>{{ $categories->details}}</td>
-                                    <!-- <td>
-                                        <a href=""><i class="fa fa-edit"></a></i>
-                                        <a href=""><i class="fa fa-close"></i></a>
-                                    </td> -->
+                                    <td>
+                                        <a href="{{route('category.edit',$categories->id)}}"><i class="fa fa-edit"></a></i>
+                                        <a onclick="return confirm('Are you sure want to delete this item?');" href="{{route('category.delete',$categories->id)}}"><i class="fa fa-close"></i></a>
+                                    </td>
 
                                 </tr>
 

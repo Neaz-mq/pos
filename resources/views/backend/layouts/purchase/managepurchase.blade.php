@@ -28,10 +28,7 @@
                                     <th scope="col">Supplier</th>
                                     <th scope="col">Total price</th>                                                             
                                     <th scope="col">Action</th>
-                                    <!-- <th scope="col">Received by</th> -->
-
-                                    <!-- <th>Action</th> -->
-
+                                   
 
                                 </tr>
                             </thead>

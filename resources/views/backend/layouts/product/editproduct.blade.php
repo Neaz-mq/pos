@@ -17,7 +17,7 @@
 
                     <div class="x_content">
 
-                        <form action="{{route('product.post')}}" method="post" class="form-horizontal form-label-left"
+                        <form action="{{route('product.update',$products->id)}}" method="post" class="form-horizontal form-label-left"
                             novalidate>
 
 
@@ -25,14 +25,14 @@
 
 
                             @csrf
-
+                            @method('put')
                             <div class="item form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="ProductName">Product
                                     Name
 
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input id="ProductName" class="form-control col-md-7 col-xs-12" name="name"
+                                    <input value="{{$products->name}}" id="ProductName" class="form-control col-md-7 col-xs-12" name="name"
                                         placeholder="Product name" required="required" type="text">
                                 </div>
                             </div>
@@ -43,62 +43,34 @@
                                 </label>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input id="price" class="form-control col-md-7 col-xs-12" name="price"
+                                    <input value="{{$products->price}}" readonly id="price" class="form-control col-md-7 col-xs-12" name="price"
                                         placeholder="Enter price" required="required" type="price">
                                 </div>
                             </div>
-
-
-
-
-
-
 
 
                             <div class="item form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Product description
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" id="description" name="description" required="required"
+                                    <input value="{{$products->description}}"type="text" id="description" name="description" required="required"
                                         placeholder="Enter description" class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
 
 
-                            <div class="item form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">Category
-                                </label>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <select type="text" id="category" name="category" required="required"
-                                         class="form-control col-md-7 col-xs-12">
-                                        @foreach ($categories as $category)
-
-
-                                        <option value="{{$category->id}}">{{$category->name}}</option>
-
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-
-
-                            
-
-
+                
                             <div class="item form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="availability">Available
                                     
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <select id="availability" name="availability">
+                                    <select value="{{$products->availability}}" id="availability" name="availability">
                                         <option value="yes">Available</option>
                                         <option value="no">Unavailable</option>
                                     </select>
                                 </div>
                             </div>
-
-
-
 
 
                             <div class="ln_solid"></div>

@@ -40,7 +40,7 @@
                                 
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{$sale->id}}</td>
+                                    <td>INV{{$sale->id}}</td>
                                     <td>{{$sale->sale_date}}</td>
                                     <td>{{$sale->customer->name}}</td>
                                     <td>{{$sale->total_price}}</td>

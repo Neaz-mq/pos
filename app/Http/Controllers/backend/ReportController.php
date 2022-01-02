@@ -28,9 +28,16 @@ class ReportController extends Controller
         return view('backend.layouts.reports.purchasereport',compact('purchasehistories'));
 
     }
-    public function sales_report(){
-       
-        return view('backend.layouts.reports.salesreport');
+
+    public function sales_report(Request $request){
+        if($request->from_date){
+            $sales=Sale::where('sale_date',$request->from_date)->orderBy('id','desc')->get();
+        }
+    
+        else{
+            $sales=Sale::orderBy('id','desc')->get();
+        }
+        return view('backend.layouts.reports.salesreport',compact('sales'));
 
     }
     
