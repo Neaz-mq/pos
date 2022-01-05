@@ -17,9 +17,9 @@
 
                     <div class="x_content">
 
-                        <form class="form-horizontal form-label-left" novalidate>
+                        <form action="{{route('postuser')}}" method="post" class="form-horizontal form-label-left" novalidate>
 
-
+                            @csrf
                             <span class="section">Add user</span>
 
                             <div class="item form-group">
@@ -53,8 +53,8 @@
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <select id="designation" name="designation">
-                                        <option value="2">Manager</option>
-                                        <option value="3">Seller</option>
+                                        <option value="manager">Manager</option>
+                                        <option value="seller">Seller</option>
                                     </select>
                                 </div>
                             </div>

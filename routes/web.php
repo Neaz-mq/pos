@@ -5,6 +5,7 @@ use App\Http\Controllers\backend\DashboardController;
 use App\Http\Controllers\backend\StoreController;
 use App\Http\Controllers\backend\PosController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\backend\ProductController;
@@ -32,11 +33,26 @@ use App\Http\Controllers\backend\ReportController;
 
 
 
-Route::get('/',[StoreController::class,'store']);
+//Route::get('/gfh',[StoreController::class,'store']);
 
+//Login
+Route::get('/',[LoginController::class,'login'])->name('login');
+Route::post('/login',[LoginController::class,'login_user'])->name('login_user');
+Route::group(['middleware'=>'auth'],function()
+// ,'middleware'=>'auth'
 
-//Dashboard
+{
+    Route::group(['prefix'=>'admin','middleware'=>'admin'],function (){
+        
+        //Dashboard
 Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('dashboard');
+        //dash
+
+        
+
+        });
+
+
 
 
 //POS
@@ -74,6 +90,7 @@ Route::get('/stock/manage',[StockController::class,'store'])->name('stock.manage
 //User
 Route::get('/adduser',[UserController::class,'adduser'])->name('add.user');
 Route::get('/user/manage',[UserController::class,'user_manage'])->name('user.manage');
+Route::post('/post/users',[UserController::class,'postuser'])->name('postuser');
 
     
 
@@ -115,3 +132,4 @@ Route::get('/supplier/payment', [PaymentController::class,'supplier_payment'])->
 //Report
 Route::get('/report/purchase', [ReportController::class,'purchase_report'])->name('report.purchase');
 Route::get('/report/sales', [ReportController::class,'sales_report'])->name('report.sales');
+});

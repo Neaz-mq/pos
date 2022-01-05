@@ -2,6 +2,7 @@
     <div class="menu_section">
 
         <ul class="nav side-menu">
+        @if(auth()->user()->type=='admin')
             <li>
                 <a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i>Dashboard </a>
 
@@ -96,6 +97,7 @@
         </ul>
 
         </ul>
+        @endif
     </div>
 
 </div>
