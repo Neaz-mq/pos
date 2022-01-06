@@ -12,25 +12,38 @@ class UserController extends Controller
         return view('backend.layouts.users.adduser');
     }
     public function user_manage(){
-       
+        $users=User::all();
       
-        return view('backend.layouts.users.manageuser');
+        return view('backend.layouts.users.manageuser',compact('users'));
     }
 
     public function postuser(Request $request){
         
         
-        // dd($request->all());
+       
         User::create([
-            'type'=>$request->designation,
+            
             'username'=>$request->name,
             'fullname'=>$request->fullname,
-            'password'=>bcrypt($request->password),
+            'type'=>$request->designation,
             'phone'=>$request->phone,
+            'password'=>bcrypt($request->password)
              
 
         ]);
         return redirect()->route('user.manage');
+    }
+    public function userdelete($id)
+    {
+
+        $user=User::find($id);
+        // dd($customer);
+        if ($user){
+            $user->delete();
+            return redirect()->back()->with('message','User is Deleted');
+
+        }
+        return redirect()->back()->with('message','User is not Deleted');
     }
 
 }

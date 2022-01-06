@@ -19,8 +19,9 @@
 
                         <form action="{{route('postuser')}}" method="post" class="form-horizontal form-label-left" novalidate>
 
-                            @csrf
+                           
                             <span class="section">Add user</span>
+                            @csrf
 
                             <div class="item form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="UserName">User Name
@@ -61,14 +62,7 @@
 
 
 
-                            <!-- <div class="item form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Address
-                                </label>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" id="address" name="address" data-validate-linked="address"
-                                        placeholder="Enter address" class="form-control col-md-7 col-xs-12">
-                                </div>
-                            </div> -->
+                           
 
 
                             <div class="item form-group">

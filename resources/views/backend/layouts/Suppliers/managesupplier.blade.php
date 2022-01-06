@@ -30,7 +30,7 @@
                             </div>
                             <thead>
                                 <tr>
-                                    
+                                <th>SL</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Address</th>
@@ -43,7 +43,7 @@
                             <tbody>
                             @foreach ($suppliers as $supplier)
                                 <tr>
-                                    
+                                <td>{{ $loop->iteration }}</td>
                                     <td>{{$supplier->name}}</td>
                                     <td>{{$supplier->email}}</td>
                                     <td>{{$supplier->address}}</td>

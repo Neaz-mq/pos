@@ -33,6 +33,7 @@
                 <section class="login_content">
                 <form action="{{route('login_user')}}" method="post">
                 @csrf
+                <h1>Log in your Account</h1>
                 <div>
 
                     @if(session()->has('message'))
@@ -67,7 +68,7 @@
                     <!-- /.col -->
                 </div>
 
-                <p style="color:rgb(255, 0, 0);">if you forget your password, contact to admin...</p>
+                <p style="color:rgb(255, 0, 0);"> <br>If you forget your password, contact with admin...</p>
             </form>
                 </section>
             </div>
