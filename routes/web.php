@@ -132,4 +132,9 @@ Route::get('/supplier/payment', [PaymentController::class,'supplier_payment'])->
 //Report
 Route::get('/report/purchase', [ReportController::class,'purchase_report'])->name('report.purchase');
 Route::get('/report/sales', [ReportController::class,'sales_report'])->name('report.sales');
+
+//Logout
+Route::get('/logout',[LoginController::class,'logout'])->name('logout');
+
+
 });

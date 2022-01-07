@@ -16,11 +16,11 @@ class UserTableSeeder extends Seeder
     {
         User::create([
             
-            'username'=>'admin',
-            'fullname'=>'admin',
+            'username'=>'neaz',
+            'fullname'=>'Neaz Morshed',
             'type'=>'admin',
             'phone'=>'01785286936',
-            'password'=>bcrypt('admin'),
+            'password'=>bcrypt('neaz'),
             
 
         ]);

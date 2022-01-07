@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Login;
 use Illuminate\Support\Facades\Auth;
+use Laravel\Ui\Presets\React;
 
 class LoginController extends Controller
 {
@@ -26,7 +28,7 @@ class LoginController extends Controller
             elseif(auth()->user()->type=='manager'){
                 return redirect()->route('pos');
             }
-            elseif(auth()->user()->type=='Seller'){
+            elseif(auth()->user()->type=='seller'){
                 return redirect()->route('pos');
             }
             else{
@@ -41,6 +43,6 @@ class LoginController extends Controller
     {
 
         Auth::logout();
-        return redirect()->route('log');
+        return redirect()->route('login');
     }
 }
