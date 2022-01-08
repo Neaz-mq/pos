@@ -27,6 +27,7 @@
                                     <th scope="col">Challan No</th>
                                     <th scope="col">Supplier</th>
                                     <th scope="col">Total price</th>                                                             
+                                    <th scope="col">Received by</th>                                                             
                                     <th scope="col">Action</th>
                                    
 
@@ -41,6 +42,8 @@
                                     <td>{{$purchasehistory->challan_no}}</td>
                                     <td>{{$purchasehistory->supplier->name}}</td>
                                     <td>{{$purchasehistory->total_price}}</td>
+                                    <td>{{$purchasehistory->User->fullname}} ({{$purchasehistory->User->type}})</td>
+                                   
 
                                     
                                     <td>

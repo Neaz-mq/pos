@@ -68,7 +68,7 @@
                     <!-- /.col -->
                 </div>
 
-                <p style="color:rgb(255, 0, 0);"> <br>If you forget your password, contact with admin...</p>
+                <p style="color:rgb(255, 0, 0);"> <br>If you forget your password, contact with admin.</p>
             </form>
                 </section>
             </div>

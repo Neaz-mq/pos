@@ -167,8 +167,8 @@ class PurchaseController extends Controller
             'purchase_date'=>$request->date,
             'supplier_id'=>$request->name,
             'challan_no'=>$request->number,
-            'total_price'=>$total
-            // 'sale_by'=>auth()->user()->id,
+            'total_price'=>$total,
+            'received_by'=>auth()->user()->id
 
         ]);
 

@@ -18,6 +18,7 @@ class CreateSalesTable extends Migration
             $table->string('sale_date');
             $table->integer('customer_id');
             $table->string('total_price');
+            $table->string('sale_by');
             $table->timestamps();
         });
     }

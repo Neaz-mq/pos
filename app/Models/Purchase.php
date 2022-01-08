@@ -20,5 +20,11 @@ class Purchase extends Model
         return $this->belongsto(Supplier::class);
     
         }
+        public function User()
+        {
+
+            return $this->belongsto(User::class,'received_by','id');
+
+            }
     
 }

@@ -26,8 +26,9 @@
                                     <th scope="col">Date</th>
                                     <th scope="col">Customer</th>
                                     <th scope="col">Total price </th>
+                                    <th scope="col">Sale by</th>
                                     <th scope="col">Action </th>
-                                    <!-- <th scope="col">Sale by</th> -->
+                                    
 
                                     <!-- <th>Action</th> -->
 
@@ -44,6 +45,7 @@
                                     <td>{{$sale->sale_date}}</td>
                                     <td>{{$sale->customer->name}}</td>
                                     <td>{{$sale->total_price}}</td>
+                                    <td>{{$sale->User->fullname}} ({{$sale->User->type}})</td>
                                     <td><a href="{{route('saledetails', $sale->id)}}"><i class="fa fa-list" style="font-size:24px"></i></a>
 </td>
 

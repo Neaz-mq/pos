@@ -19,6 +19,7 @@ class CreatePurchasesTable extends Migration
             $table->integer('supplier_id');
             $table->string('challan_no');
             $table->string('total_price');
+            $table->string('received_by');
             $table->timestamps();
         });
     }

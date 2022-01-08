@@ -159,8 +159,8 @@ return redirect()->back();
         $saleid=Sale::create([
             'sale_date'=>$request->sale_date,
             'customer_id'=>$request->name,
-            'total_price'=>$total
-            // 'sale_by'=>auth()->user()->id,
+            'total_price'=>$total,
+            'sale_by'=>auth()->user()->id,
 
         ]);
 
