@@ -8,15 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Saledetails extends Model
 {
     use HasFactory;
+    protected $table='saledetails';
     protected $guarded=[];
     public function product(){
         
         return $this->belongsto(Product::class);
     
         }
-        public function customer(){
         
-            return $this->belongsto(Customer::class);
-        
-            }
 }

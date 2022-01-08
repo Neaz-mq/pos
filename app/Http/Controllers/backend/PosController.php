@@ -116,6 +116,19 @@ class PosController extends Controller
 
         return redirect()->back()->with('success', 'Product added to cart successfully!');
     }
+    public function sale_list ($id)
+    {
+
+        
+        $salelist=Saledetails::where('sale_id',$id)->get();
+
+
+        return view('backend.layouts.sale.salelist',compact('salelist','id'));
+
+
+
+    }
+
 
 
 
@@ -193,7 +206,8 @@ else
 
     }
     $request->session()->forget('cart');
-return redirect()->route('sales');
+    return redirect()->route('sale_list',$saleid);
+//return redirect()->route('sales');
 
 
 }

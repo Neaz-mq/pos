@@ -59,6 +59,7 @@ Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('dashboa
 Route::get('/pos',[PosController::class,'Point_of_Sale'])->name('pos');
 Route::get('/sale/details/{id}',[PosController::class,'details'])->name('saledetails');
 Route::get('/sales',[PosController::class,'Sales'])->name('sales');
+Route::get('/sale/list/{id}',[PosController::class,'sale_list'])->name('sale_list');
 Route::post('/pos/cart',[PosController::class,'poscart'])->name('poscart');
 Route::post('/cart/sale',[PosController::class,'cart'])->name('addcart');
 Route::post('/cart/post/sale',[PosController::class,'cart_post'])->name('cartpost');
