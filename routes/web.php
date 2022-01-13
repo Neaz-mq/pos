@@ -93,7 +93,9 @@ Route::get('/adduser',[UserController::class,'adduser'])->name('add.user');
 Route::get('/user/manage',[UserController::class,'user_manage'])->name('user.manage');
 Route::post('/post/users',[UserController::class,'postuser'])->name('postuser');
 Route::get('/user/delete/{id}',[UserController::class,'userdelete'])->name('user.delete');
-    
+Route::get('/user/edit/{id}',[UserController::class,'useredit'])->name('user.edit');  
+Route::put('/user/update/{id}',[UserController::class,'userupdate'])->name('user.update');
+
 
 //Customer
 Route::get('/add/customer', [CustomerController::class,'addcustomer'])->name('add.customer');

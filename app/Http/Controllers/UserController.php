@@ -16,7 +16,17 @@ class UserController extends Controller
       
         return view('backend.layouts.users.manageuser',compact('users'));
     }
+    public function useredit($id)
 
+    {
+        
+        $users=User::find($id);
+         //dd($customers->all());
+
+        return view('backend.layouts.users.edituser',compact('users'));
+
+    }
+   
     public function postuser(Request $request){
         
         
@@ -45,5 +55,24 @@ class UserController extends Controller
         }
         return redirect()->back()->with('message','User is not Deleted');
     }
+    public function userupdate (Request $request, $id)
+    {
+        // dd($request->all());
+
+        $users=User::find($id);
+
+
+        $users->update([
+            
+            'fullname'=>$request->fullname,
+             'phone'=>$request->phone,
+           
+
+        ]);
+
+        return redirect()->route('user.manage')->with('message','UserInformation is Updated');
+
+    }
+
 
 }

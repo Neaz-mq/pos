@@ -43,6 +43,8 @@
                                     <td>{{$user->type}}</td>
                                     <td>{{$user->phone}}</td>
                                     <td class="">
+                                    <a href="{{route('user.edit',$user->id)}}"><i
+                                                class="fa fa-pencil-square-o" style="font-size:24px"></i></a>
                                     <a onclick="return confirm('Are you sure want to delete this item?');" href="{{route('user.delete',$user->id)}}"><i class="fa fa-close"
                                                 style="font-size:24px;color:red"></i></a>
                                     </td>
