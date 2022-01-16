@@ -21,21 +21,21 @@
                             <span class="section">Supplier Payments</span>
                             <thead>
                                 <tr>
-                                    
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Amount </th>
-                                    <th scope="col">Pay amount</th>
-                                    <th scope="col">Pay method</th>
-                                    <th scope="col">Due</th>
-                                    <th scope="col">Reference</th>
-                                    <!-- <th>Action</th> -->
-                                    
+
+                                    <th>Date</th>
+                                    <th>Account Type</th>
+                                    <th>Name</th>
+                                    <th>Amount</th>
+                                    <th>Pay Amount</th>
+                                    <th>Pay Mathod</th>
+                                    <th>Due</th>
+                                    <th>Reference</th>
+
 
                                 </tr>
                             </thead>
 
-                           
+
                         </table>
                     </div>
                 </div>

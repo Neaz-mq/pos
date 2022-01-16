@@ -129,7 +129,10 @@ Route::get('/purchases/details/{id}',[PurchaseController::class,'details'])->nam
 //payment
 Route::get('/customer/payment', [PaymentController::class,'customer_payment'])->name('customer.payment');
 Route::get('/supplier/payment', [PaymentController::class,'supplier_payment'])->name('supplier.payment');
-
+Route::get('/addpay/supplier/{id}',[PaymentController::class,'addpay_supplier'])->name('addpay.supplier');
+Route::get('/addpay/customer/{id}',[PaymentController::class,'addpay_customer'])->name('addpay.customer');
+Route::post('/payment/manage',[PaymentController::class,'paymanage'])->name('paymanage');
+Route::post('/payment/manage/customer',[PaymentController::class,'paymanage_customer'])->name('paymanage.customer');
 
 
 //Report

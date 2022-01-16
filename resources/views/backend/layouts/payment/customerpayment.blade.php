@@ -21,21 +21,45 @@
                             <span class="section">Customer Payments</span>
                             <thead>
                                 <tr>
-                                    
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Amount </th>
-                                    <th scope="col">Pay amount</th>
-                                    <th scope="col">Pay method</th>
-                                    <th scope="col">Due</th>
-                                    <th scope="col">Reference</th>
-                                    <!-- <th>Action</th> -->
-                                    
+
+                                    <th>Date</th>
+                                    <th>Account Type</th>
+                                    <th>Name</th>
+                                    <th>Amount</th>
+                                    <th>Pay Amount</th>
+                                    <th>Pay Mathod</th>
+                                    <th>Due</th>
+                                    <th>Reference</th>
+
 
                                 </tr>
                             </thead>
 
-                           
+                            <tbody>
+
+                                @foreach($pay as $supp)
+
+                                @php
+                                $due=$supp->amount-$supp->pay;
+                                @endphp
+                                <tr>
+                                    <td>{{ $supp->payment_date }}</td>
+                                    <td>{{ $supp->account_type }}</td>
+                                    <td>{{ $supp->customer->name }}</td>
+                                    <td>{{ $supp->amount }}</td>
+                                    <td>{{ $supp->pay }}</td>
+                                    <td>{{ $supp->pay_method }}</td>
+                                    <td>{{$due}}</td>
+                                    <td>{{ $supp->refer }}</td>
+
+
+
+
+                                    </td>
+
+                                </tr>
+                                @endforeach()
+                            </tbody>
                         </table>
                     </div>
                 </div>

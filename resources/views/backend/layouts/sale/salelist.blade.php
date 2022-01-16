@@ -29,7 +29,9 @@ $total=0;
                 <!-- Button trigger modal -->
                 <button class="btn btn-primary" onclick="printDiv('printableArea')">
                     <i class="fa fa-printer"></i>Print
+                   
                 </button>
+                <a href="{{route('addpay.customer',['id' => $id])}}" class="btn btn-primary">Payment</a>
 
 
                 <br>
