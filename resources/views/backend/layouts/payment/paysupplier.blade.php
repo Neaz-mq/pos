@@ -8,10 +8,7 @@
         <h1>
             Payments
         </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Payment</li>
-        </ol>
+        
     </section>
 
     <!-- Main content -->
@@ -24,10 +21,7 @@
 
 
 
-                <div class="box">
-                    <div class="box-header">
-                        <h3 class="box-title">Payment</h3>
-                    </div>
+                
                     <!-- /.box-header -->
                     <form role="form" action="{{route('paymanage')}}" method="post">
                         {{-- enctype="multipart/form-data"> --}}

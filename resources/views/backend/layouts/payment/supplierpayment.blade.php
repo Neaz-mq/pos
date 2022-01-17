@@ -34,6 +34,32 @@
 
                                 </tr>
                             </thead>
+                            <tbody>
+
+
+                                @foreach($pay as $supp)
+                                @php
+                                $due=$supp->amount-$supp->pay ;
+                                @endphp
+                                    <tr>
+                                        <td>{{ $supp->payment_date }}</td>
+                                        <td>{{ $supp->account_type }}</td>
+                                        <td>{{ $supp->name}}</td>
+                                        <td>{{ $supp->amount }}</td>
+                                        <td>{{ $supp->pay }}</td>
+                                        <td>{{ $supp->pay_method }}</td>
+                                        <td>{{$due}}</td>
+                                        <td>{{ $supp->refer }}</td>
+
+
+
+
+
+                                        </td>
+
+                                    </tr>
+                                @endforeach()
+                            </tbody>
 
 
                         </table>

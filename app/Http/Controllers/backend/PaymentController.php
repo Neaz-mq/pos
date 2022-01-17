@@ -46,7 +46,7 @@ class PaymentController extends Controller
         Payment::create([
             'payment_date'=>$request->pay_date,
             'account_type'=>$request->type,
-            'name'=>$request->supplier_name,
+            'name'=>$request->name,
             'amount'=>$request->amount,
             'pay'=>$request->pay,
             'refer'=>$request->ref,

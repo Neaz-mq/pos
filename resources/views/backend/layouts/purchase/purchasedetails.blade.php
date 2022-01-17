@@ -8,22 +8,30 @@
 <div class="" role="">
     <div class="">
         <div class="page-title">
-            <h3>Manage Purchase</h3>
+            <h3>Purchase details</h3>
 
 
 
         </div>
+        <br>
+        
 
         <div class="clearfix"></div>
         <br>
+        
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
 
                     <div class="x_content">
-
+                    <button class="btn btn-primary" onclick="printDiv('printableArea')">
+                <i class="fa fa-printer"></i>Print
+            </button>
+            <a href="{{route('addpay.supplier',['id' => $id])}}" class="btn btn-primary">Payment</a>
+            
+                    <div id="printableArea">
                         <table class="table">
-                            <span class="section">Manage Purchase</span>
+                            <span class="section">Purchase details</span>
                             <thead>
                                 <tr>
                                     <th>No.</th>
@@ -71,6 +79,16 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+    }
+</script>
+
 
 
 

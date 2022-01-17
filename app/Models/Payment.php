@@ -11,7 +11,7 @@ class Payment extends Model
     protected $guarded=[];
     public function supplier(){
         
-        return $this->belongsto(Supplier::class);
+        return $this->belongsto(Supplier::class,'supplier_name','id');
     
         }
         public function customer(){

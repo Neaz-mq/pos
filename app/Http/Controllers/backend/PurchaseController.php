@@ -7,7 +7,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Supplier;
-use App\Models\purchasedetails;
+use App\Models\Payment;
+use App\Models\Purchasedetails;
 use App\Models\Purchase;
 use App\Models\Stock;
 
@@ -60,10 +61,10 @@ class PurchaseController extends Controller
      public function details($id){
         
        
-        $details=purchasedetails::where('purchase_id',$id)->get();
+        $details=Purchasedetails::where('purchase_id',$id)->get();
         //dd($purchasehistories)->all();
        
-        return view('backend.layouts.purchase.purchasedetails',compact('details'));
+        return view('backend.layouts.purchase.purchasedetails',compact('details','id'));
      }
     
 
