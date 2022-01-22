@@ -76,7 +76,7 @@
 
                         @php
                         $cart = session()->get('cart');
-
+                        $total=0;
                         @endphp
 
 
@@ -98,6 +98,10 @@
                                     @if ($cart)
 
                                     @foreach ($cart as $carts)
+                                    @php
+                                    $subtotal=$carts['price']*$carts['quantity'];
+                                    $total=$subtotal+ $total
+                                    @endphp
                                     <tr>
 
 
@@ -115,6 +119,9 @@
                                 </tbody>
 
                             </table>
+                            <tr>
+                                <th>Total: {{ $total }} TK</th>
+                            </tr>
 
                             <br>
 
