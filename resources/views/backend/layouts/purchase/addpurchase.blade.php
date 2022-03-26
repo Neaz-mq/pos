@@ -119,6 +119,9 @@
                                 </tbody>
 
                             </table>
+                            <tr>
+                                <th>Total: {{ $total }} TK</th>
+                            </tr>
 
                             <br>
                             <tr>
