@@ -22,7 +22,7 @@ $total=0;
                     <div class="x_content">
 
                         <table class="table">
-                            <span class="section">Manage Products</span>
+                            <span class="section">Sales</span>
                             <thead>
                                 <tr>
                                     <th>No.</th>

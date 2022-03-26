@@ -6,20 +6,19 @@
             <div class="title_left">
                 <h3>Point of Sale </h3>
                 <div>
-                
 
 
-                @if(session()->has('message'))
+
+                    @if(session()->has('message'))
                     <div class="row" style="padding: 20px;">
-                        <span
-                            class="alert alert-warning">{{ session()->get('message') }}</span>
+                        <span class="alert alert-warning">{{ session()->get('message') }}</span>
                     </div>
-                @endif
-                
+                    @endif
+
                 </div>
             </div>
 
-           
+
 
         </div>
         <div class="clearfix"></div>
@@ -75,7 +74,7 @@
                         </form>
                         @php
                         $cart = session()->get('cart');
-
+                        $total=0;
                         @endphp
                         <br>
                         <br>
@@ -93,7 +92,7 @@
                                         <th scope="col">Price</th>
                                         <th scope="col">Sub total</th>
                                         <th><i class="fa fa-trash"></th>
-                                       
+
 
                                     </tr>
                                 </thead>
@@ -101,10 +100,10 @@
                                     @if ($cart)
 
                                     @foreach ($cart as $carts)
-                                   
+
                                     @php
                                     $subtotal=$carts['price']*$carts['qty'];
-
+                                    $total=$subtotal+ $total
                                     @endphp
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
@@ -113,7 +112,7 @@
                                         <td>{{$carts['price']}}</td>
                                         <td>{{ $subtotal }}</td>
                                         <td><a href="{{route('forget')}}"><i class="fa fa-trash"></i></a></td>
-                                        
+
 
 
                                     </tr>
@@ -123,6 +122,10 @@
                                 </tbody>
 
                             </table>
+                            <tr>
+                                <th>Total: {{ $total }} TK</th>
+                            </tr>
+
 
                         </form>
                         <br>
@@ -130,17 +133,17 @@
                         <br>
 
 
-                        <form action="{{route('cartpost')}}" method="post" class="form-horizontal form-label-left" novalidate>
+                        <form action="{{route('cartpost')}}" method="post" class="form-horizontal form-label-left"
+                            novalidate>
 
-                          @csrf
+                            @csrf
 
                             <div class="item form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Date
 
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input required type="date" value="{{ date('Y-m-d') }}"
-                                        min="{{ date('Y-m-d') }}"
+                                    <input required type="date" value="{{ date('Y-m-d') }}" min="{{ date('Y-m-d') }}"
                                         class="form-control" id="sale_date" name="sale_date">
                                 </div>
                             </div>
