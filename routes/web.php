@@ -31,10 +31,6 @@ use App\Http\Controllers\backend\ReportController;
 
 
 
-
-
-//Route::get('/gfh',[StoreController::class,'store']);
-
 //Login
 Route::get('/',[LoginController::class,'login'])->name('login');
 Route::post('/login',[LoginController::class,'login_user'])->name('login_user');
