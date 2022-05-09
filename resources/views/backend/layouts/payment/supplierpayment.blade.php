@@ -27,7 +27,7 @@
                                     <th>Name</th>
                                     <th>Amount</th>
                                     <th>Pay Amount</th>
-                                    <th>Pay Mathod</th>
+                                    <th>Pay Method</th>
                                     <th>Due</th>
                                     <th>Reference</th>
 

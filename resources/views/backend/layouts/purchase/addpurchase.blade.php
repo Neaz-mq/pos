@@ -123,11 +123,7 @@
                                 <th>Total: {{ $total }} TK</th>
                             </tr>
 
-                            <br>
-                            <tr>
-
-                            <th>Total: {{$total}} TK</th>
-                        </tr>
+                            
 
                         </form>
                         <br>

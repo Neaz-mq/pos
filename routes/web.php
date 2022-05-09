@@ -40,11 +40,10 @@ Route::group(['middleware'=>'auth'],function()
 {
     Route::group(['prefix'=>'admin','middleware'=>'admin'],function (){
         
-        //Dashboard
+        //Dashboard //last
 Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('dashboard');
         //dash
 
-        
 
         });
 

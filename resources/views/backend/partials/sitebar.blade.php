@@ -95,7 +95,7 @@
             </li>
 
             <li>
-                <a><i class="fa fa-file-pdf-o"></i>Report<span class="fa fa-chevron-down"></span></a>
+                <a><i class="fa fa-file-pdf-o"></i>Reports<span class="fa fa-chevron-down"></span></a>
                 <ul class="nav child_menu">
                     <li><a href="{{route('report.purchase')}}">Purchase report</a></li>
                     <li><a href="{{route('report.sales')}}">Sales report</a></li>
