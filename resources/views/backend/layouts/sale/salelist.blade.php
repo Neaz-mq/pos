@@ -2,13 +2,13 @@
 @section('content')
 
 @php
-$total=0;
+   $total=0;
 @endphp
 
 <div class="" role="">
     <div class="">
         <div class="page-title">
-           
+       
 
 
         </div>
@@ -18,7 +18,7 @@ $total=0;
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
-
+                
                     <div class="x_content">
 
 
@@ -38,16 +38,18 @@ $total=0;
                 <br>
 
             </div>
-
+            
             <div id="printableArea">
 
                 <div class="">
                     <div class="">
-                        <h3 class="">Sale Details</h3>
+                        <!-- <h3 class="">Sale Details</h3> -->
                     </div>
+                    
                     <!-- /.box-header -->
                     <div class="box-body">
                         <table id="manageTable" class="table table-bordered table-striped">
+                        <span class="section">Sale Details</span>
                             <thead>
                                 <tr>
 
@@ -125,3 +127,7 @@ $total=0;
 
 
 @endsection
+
+
+
+
